@@ -7,6 +7,6 @@ Codeunit 97008 "FLX Initialize Preb. Fixture"
     var
         FLXLibraryInitialize: Codeunit "FLX Initialize";
     begin
-        FLXLibraryInitialize.InitializeBefore();
+        FLXLibraryInitialize.Initialize();
     end;
 }

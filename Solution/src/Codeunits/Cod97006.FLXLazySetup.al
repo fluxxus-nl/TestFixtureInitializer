@@ -12,6 +12,6 @@ Codeunit 97006 "FLX Lazy Setup"
             exit;
 
         if FLXCheckLazySetup.DoesCodeunitNeedLazySetup(CallerCodeunitID) then
-            FLXInitialize.InitializeBefore();
+            FLXInitialize.Initialize();
     end;
 }

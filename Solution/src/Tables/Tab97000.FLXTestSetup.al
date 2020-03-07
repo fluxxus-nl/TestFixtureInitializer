@@ -12,7 +12,7 @@ Table 97000 "FLX Test Setup"
             Caption = 'Primary Key';
             DataClassification = ToBeClassified;
         }
-        field(4; "Prebuilt Fixture Exists"; Boolean)
+        field(2; "Prebuilt Fixture Exists"; Boolean)
         {
             Caption = 'Prebuilt Fixture Exists';
             DataClassification = ToBeClassified;
