@@ -1,0 +1,27 @@
+{
+  "id": "f0bf2c38-df58-4a4b-8efc-e6f2a11e00a5",
+  "name": "Test Fixture Initializer",
+  "publisher": "fluxxus.nl",
+  "version": "1.0.0.0",
+  "brief": "Add your initialization code for fresh and shared fixtures",
+  "description": "Use this example extension to setup the shared (or prebuilt) fixture to get the standard MS tests running",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "http://www.fluxxus.nl",
+  "logo": "images/logo.png",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "14.0.0.0",
+  "application": "14.0.0.0",
+  "test": "14.0.0.0",
+  "idRanges": [
+    {
+      "from": 97000,
+      "to": 97999
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://VSCode.com/help/",
+  "showMyCode": true,
+  "runtime": "3.0"
+}
