@@ -5,4 +5,4 @@ This repo contains an .al extension suggestion to setup prebuilt, shared and (ge
 
 ![schema](https://github.com/fluxxus-nl/TestFixtureInitializer/blob/master/Images/Test%20Fixture%20Initializer%20FlowChart.jpg) 
 
-Feel free to make use the code, and share your suggestions for improvements be means of an issue report.
+Feel free to make use of the code, and share your suggestions for improvements be means of an issue report.
