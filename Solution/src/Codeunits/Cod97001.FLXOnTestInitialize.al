@@ -1,6 +1,6 @@
 Codeunit 97001 "FLX OnTestInitialize"
 {
-    // (c) fluxxus.nl
+    // (c) fluxxus.nl - https://github.com/fluxxus-nl/TestFixtureInitializer
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Library - Test Initialize", 'OnTestInitialize', '', false, false)]
     local procedure OnTestInitialize(CallerCodeunitID: Integer)

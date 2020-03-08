@@ -1,6 +1,6 @@
 Codeunit 97005 "FLX Check Lazy Setup"
 {
-    // (c) fluxxus.nl
+    // (c) fluxxus.nl - https://github.com/fluxxus-nl/TestFixtureInitializer
 
     procedure DoesCodeunitNeedLazySetup(CallerCodeunitID: Integer): Boolean
     begin

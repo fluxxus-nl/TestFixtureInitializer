@@ -1,6 +1,6 @@
 Page 97000 "FLX Test Setup"
 {
-    // (c) fluxxus.nl
+    // (c) fluxxus.nl - https://github.com/fluxxus-nl/TestFixtureInitializer
 
     Caption = 'Test Setup';
     DeleteAllowed = false;

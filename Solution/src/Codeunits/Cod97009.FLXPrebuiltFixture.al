@@ -1,6 +1,6 @@
 Codeunit 97009 "FLX Prebuilt Fixture"
 {
-    // (c) fluxxus.nl
+    // (c) fluxxus.nl - https://github.com/fluxxus-nl/TestFixtureInitializer
 
     procedure DoesPrebuiltFixtureExist(): Boolean
     var

@@ -1,6 +1,6 @@
 Codeunit 97006 "FLX Lazy Setup"
 {
-    // (c) fluxxus.nl
+    // (c) fluxxus.nl - https://github.com/fluxxus-nl/TestFixtureInitializer
 
     procedure SetLazySetup(CallerCodeunitID: Integer)
     var

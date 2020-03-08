@@ -1,7 +1,7 @@
 Codeunit 97008 "FLX Initialize Preb. Fixture"
 {
-    // (c) fluxxus.nl
-    // this codeunit canbe called in build or release pipeline to set prebuilt fixture
+    // (c) fluxxus.nl - https://github.com/fluxxus-nl/TestFixtureInitializer
+    // this codeunit can be called in build or release pipeline to set prebuilt fixture
 
     trigger OnRun()
     var

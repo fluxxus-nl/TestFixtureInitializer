@@ -1,6 +1,6 @@
 Codeunit 97000 "FLX Initialize"
 {
-    // (c) fluxxus.nl
+    // (c) fluxxus.nl - https://github.com/fluxxus-nl/TestFixtureInitializer
 
     procedure Initialize()
     var
@@ -9,7 +9,7 @@ Codeunit 97000 "FLX Initialize"
         if not FLXPrebuiltFixture.DoesPrebuiltFixtureExist() then begin
             FLXPrebuiltFixture.SetPrebuiltFixtureExists(true);
 
-            // add your methods here to add to the shared fixture
+            // add your methods here to add data to the shared fixture
         end;
     end;
 }
