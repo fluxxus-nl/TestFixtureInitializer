@@ -43,7 +43,7 @@ jobs:
     inputs:
       usedocker: true
       nav_app_version: '1.0.[yyyyWW].*'
-    targetproject: 'TestFixtureInitializer/app/app.json'
+      targetproject: 'TestFixtureInitializer/app/app.json'
       app_file_suffix: '_APP'                                 # A trick to uniquely identify the APP (from the TEST-app)
 
   - task: ALOpsAppPublish@1
