@@ -13,7 +13,7 @@ pool: TestAutomationExamples
 jobs:
 - job: default
   timeoutInMinutes: 600
-  pool: default
+  pool: TestAutomationExamples
 
   steps:
   - checkout: self
