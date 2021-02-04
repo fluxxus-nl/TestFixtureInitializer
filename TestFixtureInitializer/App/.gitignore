@@ -6,4 +6,5 @@
 
 # Temp files
 .vs/
-.vscode/
+.vscode/**
+!.vscode/settings.json

@@ -17,7 +17,7 @@ Page 97000 "FLX Test Setup"
             group(General)
             {
                 Caption = 'General';
-                field("Prebuilt Fixture Exists"; "Prebuilt Fixture Exists")
+                field("Prebuilt Fixture Exists"; Rec."Prebuilt Fixture Exists")
                 {
                     ApplicationArea = All;
                 }
@@ -27,6 +27,6 @@ Page 97000 "FLX Test Setup"
 
     trigger OnOpenPage()
     begin
-        InsertRecord();
+        Rec.InsertRecord();
     end;
 }

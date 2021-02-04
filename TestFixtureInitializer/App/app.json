@@ -7,21 +7,31 @@
   "description": "Use this example extension to setup the shared (or prebuilt) fixture to get the standard MS tests running",
   "privacyStatement": "",
   "EULA": "",
-  "help": "",
+  "help": "https://github.com/fluxxus-nl/TestFixtureInitializer",
   "url": "http://www.fluxxus.nl",
-  "logo": "images/logo.png",
-  "dependencies": [],
+  "logo": "assets/logo.png",
+  "dependencies": [
+    {
+      "id": "5d86850b-0d76-4eca-bd7b-951ad998e997",
+      "publisher": "Microsoft",
+      "name": "Tests-TestLibraries",
+      "version": "1.0.0.0"
+    },
+    {
+      "id":  "fa3e2564-a39e-417f-9be6-c0dbe3d94069",
+      "name":  "Tests-ERM",
+      "publisher":  "Microsoft",
+      "version":  "16.0.0.0"  
+    }
+  ],
   "screenshots": [],
-  "platform": "14.0.0.0",
-  "application": "14.0.0.0",
-  "test": "14.0.0.0",
   "idRanges": [
     {
       "from": 97000,
       "to": 97999
     }
   ],
-  "contextSensitiveHelpUrl": "https://VSCode.com/help/",
+  "contextSensitiveHelpUrl": "https://App.com/help/",
   "showMyCode": true,
-  "runtime": "3.0"
+  "runtime": "5.0"
 }

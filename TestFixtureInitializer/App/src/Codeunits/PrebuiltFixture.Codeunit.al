@@ -6,21 +6,17 @@ Codeunit 97009 "FLX Prebuilt Fixture"
     var
         FLXTestSetup: Record "FLX Test Setup";
     begin
-        with FLXTestSetup do begin
-            if not Get() then
-                Insert();
-            exit("Prebuilt Fixture Exists");
-        end
+        if not FLXTestSetup.Get() then
+            FLXTestSetup.Insert();
+        exit(FLXTestSetup."Prebuilt Fixture Exists");
     end;
 
     procedure SetPrebuiltFixtureExists(PrebuiltFixtureExists: Boolean)
     var
         FLXTestSetup: Record "FLX Test Setup";
     begin
-        with FLXTestSetup do begin
-            Get();
-            "Prebuilt Fixture Exists" := PrebuiltFixtureExists;
-            Modify();
-        end
+        FLXTestSetup.Get();
+        FLXTestSetup."Prebuilt Fixture Exists" := PrebuiltFixtureExists;
+        FLXTestSetup.Modify();
     end;
 }
