@@ -93,3 +93,5 @@ jobs:
     displayName: 'ALOPS - Remove Docker Container'
     enabled: true
     condition: always()
+    inputs:
+      createsqlbackup: 'onfailure'
