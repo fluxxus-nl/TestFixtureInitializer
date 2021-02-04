@@ -38,6 +38,21 @@ jobs:
       usedocker: true
       license_path: '$(LuxBeheerBcDevLicense)'
 
+  #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  - task: ALOpsAppPublish@1
+    displayName: 'ALOPS - Install AL TestTool' # install necessary dependent apps for testability
+    inputs:
+      usedocker: true
+      installaltesttool: true
+      skip_verification: true
+      install_al_app_names: |
+       Tests-TestLibraries
+       Tests-ERM
+       Test Runner
+
+  #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
   - task: ALOpsAppCompiler@1
     displayName: 'ALOPS - Compile Extension: App'
     inputs:
