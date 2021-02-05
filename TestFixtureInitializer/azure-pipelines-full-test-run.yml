@@ -48,8 +48,12 @@ jobs:
       skip_verification: true
       install_al_app_names: |
        Tests-TestLibraries
-       Tests-ERM
+       System Application Test
+       System Application Test Library
+       Any
+       Library Assert
        Test Runner
+       Tests-ERM
 
   #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
