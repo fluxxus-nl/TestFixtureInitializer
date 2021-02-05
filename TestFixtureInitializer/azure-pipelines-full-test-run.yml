@@ -23,6 +23,7 @@ jobs:
     displayName: 'ALOPS - Create Docker Image' # It will reuse the image if already exists, or build one if it doesn't.
     inputs:
       artifacttype: 'Sandbox'
+      forcecreateimage: true
       includetesttoolkit: true
 
   - task: ALOpsDockerStart@1
