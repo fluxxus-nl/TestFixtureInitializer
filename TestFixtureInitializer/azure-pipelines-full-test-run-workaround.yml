@@ -122,7 +122,7 @@ jobs:
       testsuite: 'DEFAULT'
       failed_test_action: 'Ignore'
     continueOnError: true
-    timeoutInMinutes: 360
+    timeoutInMinutes: 580
 
   - task: PublishTestResults@2
     displayName: 'Publish Test Results **/TestResults.xml'
