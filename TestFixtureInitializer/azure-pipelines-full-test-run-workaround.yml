@@ -100,7 +100,6 @@ jobs:
     displayName: 'ALOPS - Run TestSuite'
     inputs:
       usedocker: true
-      testfilter: '81000..'
       failed_test_action: 'Ignore'
     continueOnError: true
     timeoutInMinutes: 360
