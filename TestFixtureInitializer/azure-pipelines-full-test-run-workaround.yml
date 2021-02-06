@@ -87,7 +87,7 @@ jobs:
       usedocker: true
       nav_app_version: '1.0.[yyyyWW].*'
       targetproject: 'TestFixtureInitializer/app/app.json'
-      app_file_suffix: '_APP'
+      app_file_suffix: '_APP'                                 # A trick to uniquely identify the APP (from the TEST-app)
 
   - task: ALOpsAppPublish@1
     displayName: 'ALOPS - Publish Extension'
@@ -96,14 +96,30 @@ jobs:
       nav_artifact_app_filter: '*.app'
       skip_verification: true
 
+  - task: ALOpsAppCompiler@1
+    displayName: 'ALOPS - Compile Extension: Test-App'
+    inputs:
+      usedocker: true
+      nav_app_version: '1.0.[yyyyWW].*'
+      targetproject: 'TestFixtureInitializer/test/app.json'
+      failed_on_warnings: true    
+      app_file_suffix: '_TEST'                                 # A trick to uniquely identify the Test-App (from the App)
+
+  - task: ALOpsAppPublish@1
+    displayName: 'ALOPS - Publish Extension'
+    inputs:
+      usedocker: true
+      nav_artifact_app_filter: '*.app'
+      skip_verification: true   
+
   - task: ALOpsAppTest@1
     displayName: 'ALOPS - Run TestSuite'
     inputs:
       usedocker: true
-      testfilter: '130000..149999'
+    import_action: "Skip"
       import_testtoolkit: false
-      import_action: 'Skip'
       testpage: '130455'
+    testsuite: 'DEFAULT'
       failed_test_action: 'Ignore'
     continueOnError: true
     timeoutInMinutes: 360
