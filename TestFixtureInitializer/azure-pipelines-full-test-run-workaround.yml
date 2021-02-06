@@ -102,6 +102,8 @@ jobs:
       import_action: "Skip"
       import_testtoolkit: false
       usedocker: true
+      testpage: '130455'
+      testsuite: 'DEFAULT'
       failed_test_action: 'Ignore'
     continueOnError: true
     timeoutInMinutes: 360
