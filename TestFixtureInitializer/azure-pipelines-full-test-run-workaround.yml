@@ -116,10 +116,10 @@ jobs:
     displayName: 'ALOPS - Run TestSuite'
     inputs:
       usedocker: true
-    import_action: "Skip"
+      import_action: "Skip"
       import_testtoolkit: false
       testpage: '130455'
-    testsuite: 'DEFAULT'
+      testsuite: 'DEFAULT'
       failed_test_action: 'Ignore'
     continueOnError: true
     timeoutInMinutes: 360
