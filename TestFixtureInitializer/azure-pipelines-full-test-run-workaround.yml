@@ -99,6 +99,8 @@ jobs:
   - task: ALOpsAppTest@1
     displayName: 'ALOPS - Run TestSuite'
     inputs:
+      import_action: "Skip"
+      import_testtoolkit: false
       usedocker: true
       failed_test_action: 'Ignore'
     continueOnError: true
