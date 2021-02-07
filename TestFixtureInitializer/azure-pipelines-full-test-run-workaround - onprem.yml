@@ -41,6 +41,9 @@ jobs:
       skip_verification: true
       install_al_app_names: |
         Any
+        Library Assert
+        Library Variable Storage
+        System Application Test Library
         Tests-Bank
         Tests-Cash Flow
         Tests-Cost Accounting
@@ -66,7 +69,6 @@ jobs:
         Tests-Resource
         Tests-Reverse
         Tests-SCM
-        Tests-SINGLESERVER
         Tests-SMB
         Tests-SMTP
         Tests-TestLibraries
@@ -75,10 +77,6 @@ jobs:
         Tests-VAT
         Tests-Workflow
         Test Runner
-        Library Assert
-        Library Variable Storage
-        System Application Test
-        System Application Test Library
 
   - task: ALOpsAppCompiler@1
     displayName: 'ALOPS - Compile Extension: App'

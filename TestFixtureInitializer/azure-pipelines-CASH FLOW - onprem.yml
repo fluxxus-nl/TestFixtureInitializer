@@ -43,6 +43,7 @@ jobs:
         Any
         Library Assert
         Library Variable Storage
+        System Application Test Library
         Tests-Bank
         Tests-Cash Flow
         Tests-Cost Accounting
