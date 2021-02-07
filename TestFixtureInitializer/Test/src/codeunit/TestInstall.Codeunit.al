@@ -34,10 +34,9 @@ codeunit 97050 "FLX Tfi Test Install"
         SetupTestSuite('Resource', '0243a4ea-21b3-4fa8-ad70-9915a4400be0');
         SetupTestSuite('Reverse', 'ab333b30-f600-4d0e-a519-73684ff42504');
         SetupTestSuite('SCM', '6f0b528b-a4de-4ccd-a948-d1350e228e4a');
-        // SetupTestSuite('SINGLESERVER', '5b061701-dae6-48cc-bc16-8c4761a2baf5'); // note MS: Tests-SINGLESERVER are rather destructive to the environment and other tests. We are running these separately from the others. I would not include these by the default.
+        // SetupTestSuite('SINGLESERVER', '5b061701-dae6-48cc-bc16-8c4761a2baf5'); // note MS: Tests-SINGLESERVER are rather destructive to the environment and other tests. We are running these separately from the others. I would not include these by default.
         SetupTestSuite('SMB', 'c9bea3a6-a9af-499f-b78a-130a42eceedd');
         SetupTestSuite('SMTP', 'c49d9d39-1c94-46d2-8bf7-3cce15ba54dc');
-        // SetupTestSuite('TestLibraries', '5d86850b-0d76-4eca-bd7b-951ad998e997');
         SetupTestSuite('Upgrade', 'd0e99b97-089b-449f-a0f5-a2ab994dbfd7');
         SetupTestSuite('User', '9cc7e87b-8ba9-4c23-82d4-8af3e919c84b');
         SetupTestSuite('VAT', '0f0955b8-92e2-4ce2-a580-3c4583dde9ae');

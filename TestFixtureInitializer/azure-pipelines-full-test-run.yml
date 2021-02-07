@@ -22,7 +22,6 @@ jobs:
   - task: ALOpsDockerCreate@1
     displayName: 'ALOPS - Create Docker Image' # It will reuse the image if already exists, or build one if it doesn't.
     inputs:
-      artifacttype: 'Sandbox'
       forcecreateimage: $(forceCreateImage)
       licensefile: '$(LuxBeheerBcDevLicense)'
       includetesttoolkit: true
@@ -50,13 +49,30 @@ jobs:
       nav_artifact_app_filter: '*.app'
       skip_verification: true
 
-  #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  - task: ALOpsAppCompiler@1
+    displayName: 'ALOPS - Compile Extension: Test-App'
+    inputs:
+      usedocker: true
+      nav_app_version: '1.0.[yyyyWW].*'
+      targetproject: 'TestFixtureInitializer/test/app.json'
+      failed_on_warnings: true    
+      app_file_suffix: '_TEST'                                 # A trick to uniquely identify the Test-App (from the App)
+
+  - task: ALOpsAppPublish@1
+    displayName: 'ALOPS - Publish Extension'
+    inputs:
+      usedocker: true
+      nav_artifact_app_filter: '*.app'
+      skip_verification: true   
 
   - task: ALOpsAppTest@1
     displayName: 'ALOPS - Run TestSuite'
     inputs:
       usedocker: true
-      testfilter: '81000..'
+      import_action: "Skip"
+      import_testtoolkit: false
+      testpage: '130455'
+      testsuite: 'BANK'
       failed_test_action: 'Ignore'
     continueOnError: true
     timeoutInMinutes: 360
@@ -68,8 +84,6 @@ jobs:
       testResultsFiles: '**/TestResults.xml'
       failTaskOnFailedTests: true
       testRunTitle: 'BC Test Results: $(Build.BuildId)'
-
-  #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
   - task: ALOpsDockerRemove@1
     displayName: 'ALOPS - Remove Docker Container'
