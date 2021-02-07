@@ -119,7 +119,7 @@ jobs:
       testsuite: 'ERM'
       failed_test_action: 'Ignore'
     continueOnError: true
-    timeoutInMinutes: 120
+    timeoutInMinutes: 180
 
   - task: PublishTestResults@2
     displayName: 'Publish Test Results **/TestResults.xml'
@@ -134,4 +134,4 @@ jobs:
     enabled: true
     condition: always()
     inputs:
-      createsqlbackup: $(createSqlBackup)
+      createsqlbackup: '$(createSqlBackup )'
