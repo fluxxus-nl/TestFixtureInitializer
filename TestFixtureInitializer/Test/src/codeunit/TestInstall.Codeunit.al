@@ -51,10 +51,11 @@ codeunit 97050 "FLX Tfi Test Install"
         TestSuiteMgt: Codeunit "Test Suite Mgt.";
         SuiteNameCode: Code[10];
     begin
-        if ALTestSuite.Get(SuiteName) then
+        SuiteNameCode := CopyStr(SuiteName, MaxStrLen(SuiteNameCode));
+
+        if ALTestSuite.Get(SuiteNameCode) then
             ALTestSuite.Delete(true);
 
-        SuiteNameCode := CopyStr(SuiteName, MaxStrLen(SuiteNameCode));
         TestSuiteMgt.CreateTestSuite(SuiteNameCode);
 
         ALTestSuite.Get(SuiteNameCode);
