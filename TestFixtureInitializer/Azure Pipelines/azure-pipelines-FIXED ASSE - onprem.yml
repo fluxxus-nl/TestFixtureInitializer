@@ -134,4 +134,4 @@ jobs:
     enabled: true
     condition: always()
     inputs:
-      createsqlbackup: $(createsqlbackup)
+      createsqlbackup: '$(createSqlBackup)'
