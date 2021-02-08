@@ -51,8 +51,7 @@ codeunit 97050 "FLX Tfi Test Install"
         SuiteNameCode: Code[10];
         Module: ModuleInfo;
     begin
-        NavApp.GetModuleInfo(ExtensionID, Module);
-        if IsNullGuid(Module.id()) then
+        if not NavApp.GetModuleInfo(ExtensionID, Module) then
             exit;
 
         SuiteNameCode := CopyStr(SuiteName, 1, MaxStrLen(SuiteNameCode));
