@@ -33,6 +33,11 @@ jobs:
     inputs:
       search_string: 'Ready for connections!'
 
+  - task: ALOpsAppClean@1
+    inputs:
+      usedocker: true
+      includemicrosoftapps: true
+
   - task: ALOpsAppPublish@1
     displayName: 'ALOPS - Install AL TestTool' # install necessary dependent apps for testability
     inputs:
