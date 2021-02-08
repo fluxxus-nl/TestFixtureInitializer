@@ -36,7 +36,7 @@ jobs:
   - task: ALOpsAppClean@1
     inputs:
       usedocker: true
-      includemicrosoftapps: $(includemicrosoftapps)
+      includemicrosoftapps: $(includeMicrosoftApps)
 
   - task: ALOpsAppPublish@1
     displayName: 'ALOPS - Install AL TestTool' # install necessary dependent apps for testability
