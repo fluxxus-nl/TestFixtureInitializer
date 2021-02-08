@@ -44,8 +44,9 @@ jobs:
         Library Assert
         Library Variable Storage
         System Application Test Library
-        Tests-Cash Flow
         Tests-TestLibraries
+        Tests-Cash Flow
+        Tests-ERM
         Test Runner
 
   - task: ALOpsAppCompiler@1

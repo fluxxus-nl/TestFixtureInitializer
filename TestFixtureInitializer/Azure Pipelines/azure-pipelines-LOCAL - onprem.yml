@@ -44,8 +44,9 @@ jobs:
         Library Assert
         Library Variable Storage
         System Application Test Library
-        Tests-Local
         Tests-TestLibraries
+        Tests-ERM
+        Tests-Local
         Test Runner
 
   - task: ALOpsAppCompiler@1

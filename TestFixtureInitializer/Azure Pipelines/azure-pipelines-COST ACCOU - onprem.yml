@@ -44,8 +44,9 @@ jobs:
         Library Assert
         Library Variable Storage
         System Application Test Library
-        Tests-Cost Accounting
         Tests-TestLibraries
+        Tests-Cost Accounting
+        Tests-ERM
         Test Runner
 
   - task: ALOpsAppCompiler@1

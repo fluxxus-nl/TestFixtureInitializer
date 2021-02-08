@@ -44,8 +44,8 @@ jobs:
         Library Assert
         Library Variable Storage
         System Application Test Library
-        Tests-Report
         Tests-TestLibraries
+        Tests-ERM
         Tests-Workflow
         Test Runner
 
