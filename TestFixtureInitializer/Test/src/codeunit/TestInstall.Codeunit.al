@@ -49,7 +49,12 @@ codeunit 97050 "FLX Tfi Test Install"
         ALTestSuite: Record "AL Test Suite";
         TestSuiteMgt: Codeunit "Test Suite Mgt.";
         SuiteNameCode: Code[10];
+        Module: ModuleInfo;
     begin
+        NavApp.GetModuleInfo(ExtensionID, Module);
+        if IsNullGuid(Module.id()) then
+            exit;
+
         SuiteNameCode := CopyStr(SuiteName, 1, MaxStrLen(SuiteNameCode));
 
         if ALTestSuite.Get(SuiteNameCode) then
