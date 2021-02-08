@@ -119,7 +119,7 @@ jobs:
       testsuite: 'ERM'
       failed_test_action: 'Ignore'
     continueOnError: true
-    timeoutInMinutes: 180
+    timeoutInMinutes: 240
 
   - task: PublishTestResults@2
     displayName: 'Publish Test Results **/TestResults.xml'
