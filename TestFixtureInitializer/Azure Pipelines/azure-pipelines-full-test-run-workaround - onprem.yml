@@ -12,7 +12,7 @@ pool: TestAutomationExamples
 
 jobs:
 - job: default
-  timeoutInMinutes: 600
+  timeoutInMinutes: 800
   pool: TestAutomationExamples
 
   steps:
@@ -126,7 +126,7 @@ jobs:
       testsuite: 'DEFAULT'
       failed_test_action: 'Ignore'
     continueOnError: true
-    timeoutInMinutes: 580
+    timeoutInMinutes: 800
 
   - task: PublishTestResults@2
     displayName: 'Publish Test Results **/TestResults.xml'
