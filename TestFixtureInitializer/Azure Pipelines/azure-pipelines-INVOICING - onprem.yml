@@ -34,6 +34,7 @@ jobs:
       search_string: 'Ready for connections!'
 
   - task: ALOpsDockerExec@1
+    displayName: 'ALOPS - uninstall MS apps (but leave Application apps)'
       inputs:
         inline_script: |
           Get-NAVAppInfo -ServerInstance BC -tenant default -tenantspecificproperties | 
