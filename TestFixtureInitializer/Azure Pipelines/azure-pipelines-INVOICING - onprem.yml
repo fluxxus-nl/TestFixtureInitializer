@@ -24,6 +24,7 @@ jobs:
     inputs:
       forcecreateimage: $(forceCreateImage)
       licensefile: '$(LuxBeheerBcDevLicense)'
+      includetesttoolkit: true
 
   - task: ALOpsDockerStart@1
     displayName: 'ALOPS - Start Docker Container' # No need to provide any details - it will get the details from previous step
@@ -32,22 +33,6 @@ jobs:
     displayName: 'ALOPS - Wait for Docker Container to start'
     inputs:
       search_string: 'Ready for connections!'
-
-  - task: ALOpsAppPublish@1
-    displayName: 'ALOPS - Install AL TestTool' # install necessary dependent apps for testability
-    inputs:
-      usedocker: true
-      installaltesttool: true
-      skip_verification: true
-      install_al_app_names: |
-        Any
-        Library Assert
-        Library Variable Storage
-        System Application Test Library
-        Tests-TestLibraries
-        Tests-ERM
-        Tests-Invoicing
-        Test Runner
 
   - task: ALOpsAppCompiler@1
     displayName: 'ALOPS - Compile Extension: App'
@@ -90,7 +75,7 @@ jobs:
       testsuite: 'INVOICING'
       failed_test_action: 'Ignore'
     continueOnError: true
-    timeoutInMinutes: 120
+    timeoutInMinutes: 30
 
   - task: PublishTestResults@2
     displayName: 'Publish Test Results **/TestResults.xml'
