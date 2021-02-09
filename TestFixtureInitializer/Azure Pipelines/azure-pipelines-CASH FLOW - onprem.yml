@@ -33,10 +33,15 @@ jobs:
     inputs:
       search_string: 'Ready for connections!'
 
-  - task: ALOpsAppClean@1
+  - task: ALOpsDockerExec@1
+    displayName: 'ALOPS - uninstall MS apps (but leave Application apps)'
     inputs:
-      usedocker: true
-      includemicrosoftapps: $(includeMicrosoftApps)
+      inline_script: |
+        Get-NAVAppInfo -ServerInstance BC -tenant default -tenantspecificproperties | 
+          where isinstalled -eq $true | 
+            Where Publisher -eq Microsoft | 
+              where {$_.Name -ne 'Base Application' -and $_.Name -ne 'System Application' -and $_.Name -ne 'Application'}  | 
+                uninstall-navapp -tenant default -force
 
   - task: ALOpsAppPublish@1
     displayName: 'ALOPS - Install AL TestTool' # install necessary dependent apps for testability
@@ -95,7 +100,7 @@ jobs:
       testsuite: 'CASH FLOW'
       failed_test_action: 'Ignore'
     continueOnError: true
-    timeoutInMinutes: 120
+    timeoutInMinutes: 45
 
   - task: PublishTestResults@2
     displayName: 'Publish Test Results **/TestResults.xml'
