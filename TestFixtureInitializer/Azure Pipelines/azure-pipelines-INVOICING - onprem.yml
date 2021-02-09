@@ -24,7 +24,6 @@ jobs:
     inputs:
       forcecreateimage: $(forceCreateImage)
       licensefile: '$(LuxBeheerBcDevLicense)'
-      includetesttoolkit: true
 
   - task: ALOpsDockerStart@1
     displayName: 'ALOPS - Start Docker Container' # No need to provide any details - it will get the details from previous step
@@ -33,6 +32,30 @@ jobs:
     displayName: 'ALOPS - Wait for Docker Container to start'
     inputs:
       search_string: 'Ready for connections!'
+
+  - task: ALOpsDockerExec@1
+      inputs:
+        inline_script: |
+          Get-NAVAppInfo -ServerInstance BC -tenant default -tenantspecificproperties | 
+            where isinstalled -eq $true | 
+              Where Publisher -eq Microsoft | 
+                where {$_.Name -ne 'Base Application' -and $_.Name -ne 'System Application' -and $_.Name -ne 'Application'}  | 
+                  uninstall-navapp -tenant default -force
+                  
+  - task: ALOpsAppPublish@1
+    displayName: 'ALOPS - Install AL TestTool' # install necessary dependent apps for testability
+    inputs:
+      usedocker: true
+      installaltesttool: true
+      skip_verification: true
+      install_al_app_names: |
+        Any
+        Library Assert
+        Library Variable Storage
+        System Application Test Library
+        Tests-TestLibraries
+        Tests-Invoicing
+        Test Runner
 
   - task: ALOpsAppCompiler@1
     displayName: 'ALOPS - Compile Extension: App'
