@@ -9,7 +9,7 @@ codeunit 97050 "FLX Tfi Test Install"
 
     local procedure SetupTestSuites()
     begin
-        SetupFullTestSuite();
+        // SetupFullTestSuite();
 
         SetupExtensionTestSuite('Bank', '1fb2e583-f2c3-4484-a8d4-387e3adce46d');
         SetupExtensionTestSuite('Cash Flow', '69837cc7-28e9-4db0-9a0f-6616f259c91a');
