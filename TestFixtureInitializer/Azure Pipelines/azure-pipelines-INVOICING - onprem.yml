@@ -35,14 +35,14 @@ jobs:
 
   - task: ALOpsDockerExec@1
     displayName: 'ALOPS - uninstall MS apps (but leave Application apps)'
-      inputs:
-        inline_script: |
-          Get-NAVAppInfo -ServerInstance BC -tenant default -tenantspecificproperties | 
-            where isinstalled -eq $true | 
-              Where Publisher -eq Microsoft | 
-                where {$_.Name -ne 'Base Application' -and $_.Name -ne 'System Application' -and $_.Name -ne 'Application'}  | 
-                  uninstall-navapp -tenant default -force
-                  
+    inputs:
+      inline_script: |
+        Get-NAVAppInfo -ServerInstance BC -tenant default -tenantspecificproperties | 
+          where isinstalled -eq $true | 
+            Where Publisher -eq Microsoft | 
+              where {$_.Name -ne 'Base Application' -and $_.Name -ne 'System Application' -and $_.Name -ne 'Application'}  | 
+                uninstall-navapp -tenant default -force
+
   - task: ALOpsAppPublish@1
     displayName: 'ALOPS - Install AL TestTool' # install necessary dependent apps for testability
     inputs:
