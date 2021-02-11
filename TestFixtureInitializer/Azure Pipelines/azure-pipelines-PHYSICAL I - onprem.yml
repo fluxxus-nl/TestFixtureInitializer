@@ -19,6 +19,8 @@ jobs:
   - checkout: self
     clean: true 
 
+  - task: ALOpsInfo@1
+
   - task: ALOpsDockerCreate@1
     displayName: 'ALOPS - Create Docker Image' # It will reuse the image if already exists, or build one if it doesn't.
     inputs:
