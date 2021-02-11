@@ -115,4 +115,4 @@ jobs:
     enabled: true
     condition: always()
     inputs:
-      createsqlbackup: 'onfailure'
+      createsqlbackup: '$(createSqlBackup)'
