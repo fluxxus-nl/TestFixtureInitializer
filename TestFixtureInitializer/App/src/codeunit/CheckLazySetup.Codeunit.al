@@ -6,7 +6,8 @@ Codeunit 97005 "FLX Check Lazy Setup"
     begin
         case CallerCodeunitID of
             // add specific codeunits here that need additonal shared fixture
-            Codeunit::"Purch. Document Posting Errors": // please be sure only to remove this example codeunit if not relevant to you
+            132502: // = Codeunit::"Purch. Document Posting Errors" - added id as number to not need dependency
+                    // please be sure to remove this example codeunit if not relevant to you
                 exit(true);
             else
                 exit(false);

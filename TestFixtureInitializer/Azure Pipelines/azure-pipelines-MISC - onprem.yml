@@ -55,7 +55,6 @@ jobs:
         Library Variable Storage
         System Application Test Library
         Tests-TestLibraries
-        Tests-ERM
         Tests-Misc
         Test Runner
 

@@ -56,7 +56,6 @@ jobs:
         System Application Test Library
         Tests-TestLibraries
         Tests-Dimension
-        Tests-ERM
         Test Runner
 
   - task: ALOpsAppCompiler@1

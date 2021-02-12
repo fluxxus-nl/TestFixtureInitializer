@@ -6,7 +6,8 @@ Codeunit 97004 "FLX Generic Fresh Setup"
     begin
         case CallerCodeunitID of
             // add specific codeunits and your method to set generic fresh fixture here
-            Codeunit::"ERM Sales Batch Posting": // please be sure only to remove this example codeunit if not relevant to you
+            134391: // = Codeunit::"ERM Sales Batch Posting" - added id as number to not need dependency
+                    // please be sure to remove this example codeunit if not relevant to you
                 SetGenericFreshSetupForERMSalesBatchPosting();
         end
     end;

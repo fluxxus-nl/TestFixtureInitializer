@@ -56,7 +56,6 @@ jobs:
         System Application Test Library
         Tests-TestLibraries
         Tests-Data Exchange
-        Tests-ERM
         Test Runner
 
   - task: ALOpsAppCompiler@1

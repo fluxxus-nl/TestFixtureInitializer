@@ -56,7 +56,6 @@ jobs:
         System Application Test Library
         Tests-TestLibraries
         Tests-Cash Flow
-        Tests-ERM
         Test Runner
 
   - task: ALOpsAppCompiler@1

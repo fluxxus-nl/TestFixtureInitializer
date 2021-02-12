@@ -6,7 +6,8 @@ Codeunit 97007 "FLX Additional Lazy Setup"
     begin
         case CallerCodeunitID of
             // add specific codeunits and your method to set additonal shared fixture here
-            Codeunit::"ERM Edit Posting Groups": // please be sure only to remove this example codeunit if not relevant to you
+            134069: // = Codeunit::"ERM Edit Posting Groups" - added id as number to not need dependency
+                    // please be sure to remove this example codeunit if not relevant to you
                 SetAdditonalLazySetupBeforeForERMEditPostingGroups();
         end
     end;
