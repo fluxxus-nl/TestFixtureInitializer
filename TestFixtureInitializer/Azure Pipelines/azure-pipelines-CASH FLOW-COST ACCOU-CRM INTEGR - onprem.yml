@@ -127,6 +127,13 @@ jobs:
     continueOnError: true
     timeoutInMinutes: 45
 
+  - task: PublishPipelineArtifact@1
+    displayName: 'Publish Test Results Artifact **/TestResults.xml'
+    inputs:
+      targetPath: '$(System.DefaultWorkingDirectory)/TestResults.xml'
+      artifact: 'TestResults.xml'
+      publishLocation: 'pipeline'
+
   - task: PublishTestResults@2
     displayName: 'Publish Test Results **/TestResults.xml'
     inputs:
