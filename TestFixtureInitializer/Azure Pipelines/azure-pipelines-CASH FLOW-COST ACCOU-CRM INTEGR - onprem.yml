@@ -128,7 +128,7 @@ jobs:
     timeoutInMinutes: 45
 
   - task: PublishPipelineArtifact@1
-    displayName: 'Publish Test Results Artifact **/TestResults.xml'
+    displayName: 'Publish Artifact Test Results **/TestResults.xml'
     inputs:
       targetPath: '$(System.DefaultWorkingDirectory)/TestResults.xml'
       artifact: 'TestResults.xml'
