@@ -93,6 +93,7 @@ jobs:
     displayName: 'ALOPS - Run TestSuite'
     inputs:
       usedocker: true
+      disabledtests: '''$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests.xml'''
       import_action: "Skip"
       import_testtoolkit: false
       testpage: '130455'
