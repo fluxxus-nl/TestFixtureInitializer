@@ -93,9 +93,9 @@ jobs:
     displayName: 'ALOPS - Run TestSuite'
     inputs:
       usedocker: true
-      disabledtests: '''$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests.xml'''
-      import_action: "Skip"
+      disabledtests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests.xml'
       import_testtoolkit: false
+      import_action: 'Skip'
       testpage: '130455'
       testsuite: 'RESOURCE'
       failed_test_action: 'Ignore'
