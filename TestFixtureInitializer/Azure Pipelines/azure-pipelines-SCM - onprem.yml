@@ -93,8 +93,9 @@ jobs:
     displayName: 'ALOPS - Run TestSuite'
     inputs:
       usedocker: true
-      import_action: "Skip"
+      disabledtests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests.json'
       import_testtoolkit: false
+      import_action: 'Skip'
       testpage: '130455'
       testsuite: 'SCM'
       failed_test_action: 'Ignore'

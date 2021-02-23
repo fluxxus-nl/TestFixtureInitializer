@@ -95,8 +95,9 @@ jobs:
     displayName: 'ALOPS - Run TestSuite CASH FLOW'
     inputs:
       usedocker: true
-      import_action: "Skip"
+      disabledtests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests.json'
       import_testtoolkit: false
+      import_action: 'Skip'
       testpage: '130455'
       testsuite: 'CASH FLOW'
       failed_test_action: 'Ignore'
@@ -107,8 +108,9 @@ jobs:
     displayName: 'ALOPS - Run TestSuite COST ACCOUNTING'
     inputs:
       usedocker: true
-      import_action: "Skip"
+      disabledtests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests.json'
       import_testtoolkit: false
+      import_action: 'Skip'
       testpage: '130455'
       testsuite: 'COST ACCOU'
       failed_test_action: 'Ignore'
@@ -119,8 +121,9 @@ jobs:
     displayName: 'ALOPS - Run TestSuite CRM INTEGRATION'
     inputs:
       usedocker: true
-      import_action: "Skip"
+      disabledtests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests.json'
       import_testtoolkit: false
+      import_action: 'Skip'
       testpage: '130455'
       testsuite: 'CRM INTEGR'
       failed_test_action: 'Ignore'
