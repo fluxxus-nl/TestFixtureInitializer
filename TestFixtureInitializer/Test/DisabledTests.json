@@ -435,13 +435,48 @@
         "method":  "*"
     },
     {
-        "codeunitId":  135400,
-        "codeunitName":  "Basic HR Plan-based E2E",
-        "method":  "E2EBasicHREmployeeAsTeamMember"
+        "codeunitId":  139027,
+        "codeunitName":  "Test Background Posting",
+        "method":  "PostSalesOrderSameCategoryTest"
     },
     {
-        "codeunitId":  135400,
-        "codeunitName":  "Basic HR Plan-based E2E",
-        "method":  "E2EBasicHREmployeeAsTeamMemberISVEmb"
+        "codeunitId":  139027,
+        "codeunitName":  "Test Background Posting",
+        "method":  "PostPurchOrderSameCategoryTest"
+    },
+    {
+        "codeunitId":  139026,
+        "codeunitName":  "Test Job Queue",
+        "method":  "EnqueueUserSessionTest"
+    },
+    {
+        "codeunitId":  139026,
+        "codeunitName":  "Test Job Queue",
+        "method":  "EnqueueSameCategory"
+    },
+    {
+        "codeunitId":  139026,
+        "codeunitName":  "Test Job Queue",
+        "method":  "GracefullDotNetErrorHandlingTest"
+    },
+    {
+        "codeunitId":  139026,
+        "codeunitName":  "Test Job Queue",
+        "method":  "JobQueueEntryRunConfirm"
+    },
+    {
+        "codeunitId":  139026,
+        "codeunitName": "Test Job Queue",
+         "method":  "JobQueueEntryRunConfirmWithGuiallowed"
+    },
+    {
+        "codeunitId":  139145,
+        "codeunitName": "PEPPOL BIS BillingTests",
+        "method":  "*"
+    },
+    {
+        "codeunitId":  134008,
+        "codeunitName": "ERM VAT Settlement with Apply",
+        "method":  "CheckGenLedgerEntryAfterRunningReportForPurchaseInvoice"
     }
 ]
