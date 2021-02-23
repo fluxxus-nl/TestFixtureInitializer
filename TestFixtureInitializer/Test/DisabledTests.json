@@ -478,5 +478,10 @@
         "codeunitId":  134008,
         "codeunitName": "ERM VAT Settlement with Apply",
         "method":  "CheckGenLedgerEntryAfterRunningReportForPurchaseInvoice"
+    },
+    {
+        "codeunitId": 137413,
+        "codeunitName":  "SCM Item Attributes",
+        "method":  "ChangeItemAttributeValueMappingName"
     }
 ]
