@@ -92,43 +92,17 @@ jobs:
       skip_verification: true   
 
   - task: ALOpsAppTest@1
-    displayName: 'ALOPS - Run TestSuite CASH FLOW'
+    displayName: 'ALOPS - Run Tests'
     inputs:
       usedocker: true
+      testfilter: '<>0'
       disabledtests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests.json'
       import_testtoolkit: false
       import_action: 'Skip'
       testpage: '130455'
-      testsuite: 'CASH FLOW'
       failed_test_action: 'Ignore'
     continueOnError: true
-    timeoutInMinutes: 45
-
-  - task: ALOpsAppTest@1
-    displayName: 'ALOPS - Run TestSuite COST ACCOUNTING'
-    inputs:
-      usedocker: true
-      disabledtests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests.json'
-      import_testtoolkit: false
-      import_action: 'Skip'
-      testpage: '130455'
-      testsuite: 'COST ACCOU'
-      failed_test_action: 'Ignore'
-    continueOnError: true
-    timeoutInMinutes: 45
-
-  - task: ALOpsAppTest@1
-    displayName: 'ALOPS - Run TestSuite CRM INTEGRATION'
-    inputs:
-      usedocker: true
-      disabledtests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests.json'
-      import_testtoolkit: false
-      import_action: 'Skip'
-      testpage: '130455'
-      testsuite: 'CRM INTEGR'
-      failed_test_action: 'Ignore'
-    continueOnError: true
-    timeoutInMinutes: 45
+    timeoutInMinutes: 90
 
   - task: PublishPipelineArtifact@1
     displayName: 'Publish Artifact Test Results **/TestResults.xml'
