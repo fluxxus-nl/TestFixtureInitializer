@@ -95,6 +95,7 @@ jobs:
     displayName: 'ALOPS - Run Tests'
     inputs:
       usedocker: true
+      testsuite: 'DEFAULT'
       testfilter: '<>0'
       disabledtests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests.json'
       show_available_tests: false
