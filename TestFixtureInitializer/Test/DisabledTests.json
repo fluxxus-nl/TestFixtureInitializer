@@ -37,7 +37,7 @@
     { "codeunitId": 137180,"codeunitName": "Costing WMS","method": "*" },
     { "codeunitId": 137181,"codeunitName": "Costing BW","method": "*" },
     { "codeunitId": 137182,"codeunitName": "Costing Corsica Features","method": "*" },
-    { "codeunitId":  137380,"codeunitName":  "SCM Performance Tests","method":  "FiveThousandSerialNosWLot" },
+    { "codeunitId": 137380,"codeunitName": "SCM Performance Tests","method": "*" },
     { "codeunitId": 137413,"codeunitName": "SCM Item Attributes","method": "ChangeItemAttributeValueMappingName" },
     { "codeunitId": 138051,"codeunitName": "O365 Test Auto Tax Setup","method": "*" },
     { "codeunitId": 138054,"codeunitName": "O365 Test Update Cust. Addr.","method": "*" },
