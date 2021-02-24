@@ -97,6 +97,7 @@ jobs:
       usedocker: true
       testfilter: '<>0'
       disabledtests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests.json'
+      show_available_tests: false
       import_testtoolkit: false
       import_action: 'Skip'
       testpage: '130455'
