@@ -100,7 +100,7 @@ jobs:
       testsuite: 'SCM'
       failed_test_action: 'Ignore'
     continueOnError: true
-    timeoutInMinutes: 240
+    timeoutInMinutes: 360
 
   - task: PublishPipelineArtifact@1
     displayName: 'Publish Artifact Test Results **/TestResults.xml'
