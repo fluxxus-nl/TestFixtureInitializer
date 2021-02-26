@@ -8,7 +8,6 @@
     { "codeunitId": 139026,"codeunitName": "Test Job Queue","method": "GracefullDotNetErrorHandlingTest" },
     { "codeunitId": 139026,"codeunitName": "Test Job Queue","method": "JobQueueEntryRunConfirm" },
     { "codeunitId": 139026,"codeunitName": "Test Job Queue","method": "JobQueueEntryRunConfirmWithGuiallowed" },
-    { "codeunitId": 139027,"codeunitName": "Test Background Posting","method": "PostSalesOrderSameCategoryTest" },
-    { "codeunitId": 139027,"codeunitName": "Test Background Posting","method": "PostPurchOrderSameCategoryTest" },
+    { "codeunitId": 139027,"codeunitName": "Test Background Posting","method": "*" },
     { "codeunitId": 139145,"codeunitName": "PEPPOL BIS BillingTests","method": "*" }        
 ]
