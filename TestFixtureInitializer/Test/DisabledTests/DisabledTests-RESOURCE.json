@@ -11,5 +11,6 @@
     { "codeunitId": 135930,"codeunitName": "Time Sheet Reg. E2E Test","method": "TestGetTimeSheetByTimeSheetDetailId" },
     { "codeunitId": 135930,"codeunitName": "Time Sheet Reg. E2E Test","method": "TestGetTimeSheetsWithDateFilter" },
     { "codeunitId": 135930,"codeunitName": "Time Sheet Reg. E2E Test","method": "TestGetTimeSheetsWithEmployeeFilter" },
-    { "codeunitId": 135930,"codeunitName": "Time Sheet Reg. E2E Test","method": "TestPatchTimeSheet" }        
+    { "codeunitId": 135930,"codeunitName": "Time Sheet Reg. E2E Test","method": "TestPatchTimeSheet" },
+    { "codeunitId": 136503,"codeunitName": "RES Time Sheets Creation","method": "TimesheetResourceSuggestByDate" }
 ]
