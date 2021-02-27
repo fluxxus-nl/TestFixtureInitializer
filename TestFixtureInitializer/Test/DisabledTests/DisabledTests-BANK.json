@@ -1,0 +1,4 @@
+[
+    { "codeunitId": 134141,"codeunitName": "ERM Bank Reconciliation","method": "PostPmtReconciliationJournalWhenPostingDateOf2ndLineIsBefore1st" },
+    { "codeunitId": 134252,"codeunitName": "Match Bank Reconciliation - UT","method": "OneBankEntryMoreRecLinesDateRange" }    
+]
