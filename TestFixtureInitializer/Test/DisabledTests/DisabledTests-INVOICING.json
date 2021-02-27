@@ -139,6 +139,8 @@
     { "codeunitId": 138935,"codeunitName": "O365 Invoice Line Tests","method": "TestRenameUOMFailsGreaterThan10Char" },
     { "codeunitId": 138935,"codeunitName": "O365 Invoice Line Tests","method": "TestRenameUOMNotAffectingPostedLines" },
     { "codeunitId": 138941,"codeunitName": "BC O365 Test Quotes","method": "TestSendFinalInvoice" },
+    { "codeunitId": 138941,"codeunitName": "BC O365 Test Quotes","method": "TestSendQuote" },
+    { "codeunitId": 138941,"codeunitName": "BC O365 Test Quotes","method": "TestTurnQuoteIntoAnInvoice" },
     { "codeunitId": 138942,"codeunitName": "BC O365 Contact Tests","method": "VerifyBCOpenContactCardfromPostedSalesInvoice" },
     { "codeunitId": 138942,"codeunitName": "BC O365 Contact Tests","method": "VerifyBCOpenContactCardfromSalesInvoice" },
     { "codeunitId": 138942,"codeunitName": "BC O365 Contact Tests","method": "VerifyBCOpenContactCardfromSalesQuote" },
