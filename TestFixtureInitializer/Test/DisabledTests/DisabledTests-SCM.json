@@ -1,4 +1,4 @@
-{
+[
     { "codeunitId": 133504,"codeunitName": "SCM Costing Performance","method": "Test_PurchReturnShptAnd2Sales_AvgFixedAppln" },
     { "codeunitId": 133504,"codeunitName": "SCM Costing Performance","method": "Test_PurchReturnShptAnd2Sales_FIFO" },
     { "codeunitId": 133504,"codeunitName": "SCM Costing Performance","method": "VSTF268387" },
@@ -215,4 +215,4 @@
     { "codeunitId": 137606,"codeunitName": "SCM CETAF Costing Reval. WIP","method": "TestLIFO_STD_ProdOrderRevalpartialILE" },
     { "codeunitId": 137612,"codeunitName": "SCM Costing Rollup Sev 2","method": "B237877" },
     { "codeunitId": 137612,"codeunitName": "SCM Costing Rollup Sev 2","method": "CalcSubcontractOrderForReleasedProdOrderWithNonBaseUOM" }        
-}
+]
