@@ -2,6 +2,7 @@
     { "codeunitId": 138003,"codeunitName": "O365 Sales Calc Disc By Type","method": "GetCustInvoiceDiscPctWhenInvDiscTypeIsAmount" },
     { "codeunitId": 138009,"codeunitName": "O365 Customer Statistics","method": "AmountOnOrders" },
     { "codeunitId": 138009,"codeunitName": "O365 Customer Statistics","method": "AmountOnQuotes" },
+    { "codeunitId": 138009,"codeunitName": "O365 Customer Statistics","method": "AmountOnUnpostedInvoices" },
     { "codeunitId": 138013,"codeunitName": "O365 Purch. Calc Disc. By Type","method": "GetVendInvoiceDiscPctWhenInvDiscTypeIsAmount" },
     { "codeunitId": 138021,"codeunitName": "O365 Purchase Invoice Stat.","method": "PurchaseInvoicePaidInTwoPayments" },
     { "codeunitId": 138054,"codeunitName": "O365 Test Update Cust. Addr.","method": "TestUpdateEmtyCustomerFromInvoice" },
