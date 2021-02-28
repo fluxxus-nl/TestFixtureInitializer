@@ -28,6 +28,7 @@
     { "codeunitId": 134775,"codeunitName": "Word & RDLC Report Selections","method": "TwoCustomers_OneSelection_WORD_FirstCustWithoutEntries" },
     { "codeunitId": 134775,"codeunitName": "Word & RDLC Report Selections","method": "TwoCustomers_OneSelection_WORD_Ok" },
     { "codeunitId": 134775,"codeunitName": "Word & RDLC Report Selections","method": "TwoCustomers_OneSelection_WORD_SecondCustWithoutEntries" },
+    { "codeunitId": 134976,"codeunitName": "ERM Sales Report","method": "CustomerDetailedAgingDueMonthsCalculation" },
     { "codeunitId": 134976,"codeunitName": "ERM Sales Report","method": "OverdueEntriesStatementReport" },
     { "codeunitId": 134976,"codeunitName": "ERM Sales Report","method": "SalesQuoteReportWithEnabledPrintVATSpecInLCY" },
     { "codeunitId": 134982,"codeunitName": "ERM Financial Reports","method": "VATVIESDeclDiskSellToCustomerCheck" },
