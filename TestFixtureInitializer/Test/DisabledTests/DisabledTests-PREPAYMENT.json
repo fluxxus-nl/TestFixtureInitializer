@@ -1,6 +1,7 @@
 [
     { "codeunitId": 134100,"codeunitName": "ERM Prepayment","method": "PartShipmentPrepmtFCY" },
     { "codeunitId": 134101,"codeunitName": "ERM Prepayment II","method": "PurchasePrepmtLineAmountErrorOnPartialPostedInvoice" },
+    { "codeunitId": 134101,"codeunitName": "ERM Prepayment II","method": "PurchPrepmtPartialReceipt" },
     { "codeunitId": 134101,"codeunitName": "ERM Prepayment II","method": "SalesPrepmtLineAmountErrorOnPartialPostedInvoice" },
     { "codeunitId": 134103,"codeunitName": "ERM Prepayment IV","method": "PrepaymentInvoiceAndShipSalesOrder" },
     { "codeunitId": 134106,"codeunitName": "ERM Prepayment V","method": "PostSalesInvoiceAfterGetShipmentLinesWithPrepmtAndAdjustedQtyToInvoiceOnOrder" },

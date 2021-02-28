@@ -1,6 +1,8 @@
 [
     { "codeunitId": 138003,"codeunitName": "O365 Sales Calc Disc By Type","method": "GetCustInvoiceDiscPctWhenInvDiscTypeIsAmount" },
+    { "codeunitId": 138009,"codeunitName": "O365 Customer Statistics","method": "AmountOnOrders" },
     { "codeunitId": 138021,"codeunitName": "O365 Purchase Invoice Stat.","method": "PurchaseInvoicePaidInTwoPayments" },
+    { "codeunitId": 138054,"codeunitName": "O365 Test Update Cust. Addr.","method": "TestUpdateEmtyCustomerFromInvoice" },
     { "codeunitId": 139049,"codeunitName": "SMB Office Addin Mgmt Test","method": "DownloadContactInsightsManifestUI" },
     { "codeunitId": 139049,"codeunitName": "SMB Office Addin Mgmt Test","method": "DownloadDocInsightsManifestUI" },
     { "codeunitId": 139126,"codeunitName": "O365 Activites Tests","method": "AmountsAreCalculatedWhenLastModifiedIsSetTo0" },
