@@ -32,6 +32,8 @@
     { "codeunitId": 134976,"codeunitName": "ERM Sales Report","method": "OverdueEntriesStatementReport" },
     { "codeunitId": 134976,"codeunitName": "ERM Sales Report","method": "SalesQuoteReportWithEnabledPrintVATSpecInLCY" },
     { "codeunitId": 134982,"codeunitName": "ERM Financial Reports","method": "VATVIESDeclDiskSellToCustomerCheck" },
+    { "codeunitId": 134983,"codeunitName": "ERM Purchase Reports","method": "PrintYourReferenceOfPostedPurchaseCrMemo" },
+    { "codeunitId": 134983,"codeunitName": "","method": "PurchInvoiceTotalAmountWithPricesIncludingVAT" },
     { "codeunitId": 134984,"codeunitName": "ERM Sales Report III","method": "PrintProFormaInvoice" },
     { "codeunitId": 134986,"codeunitName": "ERM Financial Reports II","method": "*" },
     { "codeunitId": 136905,"codeunitName": "Service Reports - II","method": "ServiceProfitOrdersShowDetailMultiLines" },
