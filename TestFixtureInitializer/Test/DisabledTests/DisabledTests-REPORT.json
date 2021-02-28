@@ -2,6 +2,7 @@
     { "codeunitId": 133769,"codeunitName": "Daily Report Tests","method": "DayBookVATEntryCustomerVendorWithSameNos" },
     { "codeunitId": 133769,"codeunitName": "Daily Report Tests","method": "OnAfterGetRecordLedgerEntryDayBookVendorLedgerEntry" },
     { "codeunitId": 134336,"codeunitName": "ERM Purch. Doc. Reports - II","method": "VendorLabel36x105mm2Columns" },
+    { "codeunitId": 134336,"codeunitName": "ERM Purch. Doc. Reports - II","method": "VendorLabel36x70mm3Columns" },
     { "codeunitId": 134336,"codeunitName": "ERM Purch. Doc. Reports - II","method": "VendorLabel37x105mm2Columns" },
     { "codeunitId": 134336,"codeunitName": "ERM Purch. Doc. Reports - II","method": "VendorLabel37x70mm3Columns" },
     { "codeunitId": 134600,"codeunitName": "Report Layout Test","method": "TestImportLayout" },
