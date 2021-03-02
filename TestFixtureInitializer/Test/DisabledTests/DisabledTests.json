@@ -582,6 +582,7 @@
     { "codeunitId": 134902,"codeunitName": "ERM Account Schedule","method": "GLAcctBalanceAtDateInBeginnigBalanceAccScheduleLineYearToDateColumn" },
     { "codeunitId": 134902,"codeunitName": "ERM Account Schedule","method": "GLAcctBalanceAtDateInBeginnigBalanceAccScheduleLineYearToDateColumnWithClosingDateGLEntry" },
     { "codeunitId": 134902,"codeunitName": "ERM Account Schedule","method": "ValuesOnAccScheduleLineForLongCalculation" },
+    { "codeunitId": 134902,"codeunitName": "ERM Account Schedule","method": "ValuesOnAccScheduleLineForRangeFormula" },
     { "codeunitId": 134902,"codeunitName": "ERM Account Schedule","method": "VerifyAccScheduleOverviewCostBudgetFilter" },
     { "codeunitId": 134902,"codeunitName": "ERM Account Schedule","method": "VerifyDimensionFilterWithBeginEndTotallingDimValues" },
     { "codeunitId": 134902,"codeunitName": "ERM Account Schedule","method": "VerifyDimensionFilterWithExcludedValuesIncludedinTotalingFilter" },
