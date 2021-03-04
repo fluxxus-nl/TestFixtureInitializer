@@ -12,7 +12,7 @@ pool: TestAutomationExamples
 
 jobs:
 - job: default
-  timeoutInMinutes: 600
+  timeoutInMinutes: 240
   pool: TestAutomationExamples
 
   steps:
@@ -56,8 +56,7 @@ jobs:
         System Application Test Library
         Tests-TestLibraries
         Tests-Bank
-        Tests-Cost Accounting
-        Tests-CRM integration
+        Tests-Cash Flow
         Test Runner
 
   - task: ALOpsAppCompiler@1
@@ -95,14 +94,14 @@ jobs:
     displayName: 'ALOPS - Run Tests'
     inputs:
       usedocker: true
-      disabledtests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests\DisabledTests-Batch1.json'
+      disabledtests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests\DisabledTests-Batch2.json' # See https://github.com/fluxxus-nl/TestFixtureInitializer/issues/4
       import_testtoolkit: false
       import_action: 'Skip'
       testpage: '130455'
       testsuite: 'DEFAULT'
       failed_test_action: 'Ignore'
     continueOnError: true
-    timeoutInMinutes: 90
+    timeoutInMinutes: 180
 
   - task: PublishPipelineArtifact@1
     displayName: 'Publish Artifact Test Results **/TestResults.xml'
