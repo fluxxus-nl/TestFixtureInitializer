@@ -56,8 +56,8 @@ jobs:
         System Application Test Library
         Tests-TestLibraries
         Tests-Dimension
-        Tests-Graph
         Tests-Integration
+        Tests-Marketing
         Test Runner
 
   - task: ALOpsAppCompiler@1
