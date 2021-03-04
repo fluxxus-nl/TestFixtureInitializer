@@ -6,7 +6,7 @@
     { "codeunitId": 134161,"codeunitName": "Pmt Export Mgt Gen. Jnl Test","method": "ExportPmtJnlLineNotApplied" },
     { "codeunitId": 139154,"codeunitName": "Incoming Doc. To Data Exch.UT","method": "TestPeppolImportFails" },
     { "codeunitId": 139154,"codeunitName": "Incoming Doc. To Data Exch.UT","method": "TestPeppolInvoiceImportLCY" },
-    { "codeunitId": 139154,"codeunitName": "Incoming Doc. To Data Exch.UT","method": "TestPeppolInvoiceToGenJnlLineLCY" }    
+    { "codeunitId": 139154,"codeunitName": "Incoming Doc. To Data Exch.UT","method": "TestPeppolInvoiceToGenJnlLineLCY" },
     { "codeunitId": 134076,"codeunitName": "ERM Suggest Vendor Payment","method": "PaymentBySuggestVendorPayment" },
     { "codeunitId": 134476,"codeunitName": "ERM Dimension Purchase","method": "DimensionOnInvoiceRounding" },
     { "codeunitId": 134483,"codeunitName": "ERM Change Global Dimensions","method": "T113_ActionPrepareOpensSessionListPagefromNotification" }    
