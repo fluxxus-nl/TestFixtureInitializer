@@ -22,6 +22,7 @@ jobs:
   - task: ALOpsDockerCreate@1
     displayName: 'ALOPS - Create Docker Image' # It will reuse the image if already exists, or build one if it doesn't.
     inputs:
+      artifacttype: $(artifactType)
       forcecreateimage: $(forceCreateImage)
       licensefile: '$(LuxBeheerBcDevLicense)'
 
@@ -55,7 +56,38 @@ jobs:
         Library Variable Storage
         System Application Test Library
         Tests-TestLibraries
+        Tests-Bank
+        Tests-Cash Flow
+        Tests-Cost Accounting
+        Tests-CRM integration
+        Tests-Data Exchange
         Tests-Dimension
+        Tests-ERM
+        Tests-Fixed Asset
+        Tests-General Journal
+        Tests-Graph
+        Tests-Integration
+        Tests-Invoicing
+        Tests-Job
+        Tests-Local
+        Tests-Marketing
+        Tests-Misc
+        Tests-Monitor Sensitive Fields
+        Tests-Permissions
+        Tests-Physical Inventory
+        Tests-Prepayment
+        Tests-Rapid Start
+        Tests-Report
+        Tests-Resource
+        Tests-Reverse
+        Tests-SCM
+        Tests-SMB
+        Tests-SMTP
+        Tests-TestLibraries
+        Tests-Upgrade
+        Tests-User
+        Tests-VAT
+        Tests-Workflow
         Test Runner
 
   - task: ALOpsAppCompiler@1
@@ -122,4 +154,4 @@ jobs:
     enabled: true
     condition: always()
     inputs:
-      createsqlbackup: 'onfailure'
+      createsqlbackup: '$(createSqlBackup)'
