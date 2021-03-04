@@ -2723,6 +2723,7 @@
     { "codeunitId": 137606,"codeunitName": "SCM CETAF Costing Reval. WIP","method": "TestLIFO_STD_ProdOrder_NegConsumption" },
     { "codeunitId": 137606,"codeunitName": "SCM CETAF Costing Reval. WIP","method": "TestLIFO_STD_ProdOrderRevalpartialILE" },
     { "codeunitId": 137606,"codeunitName": "SCM CETAF Costing Reval. WIP","method": "TestLIFO_STD_ProdOrderRevalperItem_All" },
+    { "codeunitId": 137606,"codeunitName": "SCM CETAF Costing Reval. WIP","method": "TestLIFO_STD_ProdOrderRevalperItemtoZero" },
     { "codeunitId": 137606,"codeunitName": "SCM CETAF Costing Reval. WIP","method": "TestSTD_STD_ProdOrder_NegConsumption" },
     { "codeunitId": 137606,"codeunitName": "SCM CETAF Costing Reval. WIP","method": "TestSTD_STD_ProdOrderRevalpartialILE" },
     { "codeunitId": 137606,"codeunitName": "SCM CETAF Costing Reval. WIP","method": "TestSTD_STD_ProdOrderRevalperItemtoZero" },
