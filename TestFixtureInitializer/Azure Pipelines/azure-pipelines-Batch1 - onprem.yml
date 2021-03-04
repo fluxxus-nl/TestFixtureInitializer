@@ -57,6 +57,7 @@ jobs:
         Tests-TestLibraries
         Tests-Cost Accounting
         Tests-CRM integration
+        Tests-Fixed Asset
         Test Runner
 
   - task: ALOpsAppCompiler@1
