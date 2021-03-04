@@ -57,6 +57,7 @@ jobs:
         Tests-TestLibraries
         Tests-Dimension
         Tests-Integration
+        Tests-Graph
         Tests-Marketing
         Test Runner
 
