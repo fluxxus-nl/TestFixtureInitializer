@@ -56,7 +56,6 @@ jobs:
         System Application Test Library
         Tests-TestLibraries
         Tests-Cash Flow
-        Tests-Dimension
         Tests-Integration
         Test Runner
 
