@@ -55,6 +55,7 @@ jobs:
         Library Variable Storage
         System Application Test Library
         Tests-TestLibraries
+        Tests-Bank
         Tests-Cost Accounting
         Tests-CRM integration
         Test Runner
@@ -94,7 +95,7 @@ jobs:
     displayName: 'ALOPS - Run Tests'
     inputs:
       usedocker: true
-      disabledtests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests\DisabledTests.json'
+      disabledtests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests\DisabledTests-Batch1.json'
       import_testtoolkit: false
       import_action: 'Skip'
       testpage: '130455'
