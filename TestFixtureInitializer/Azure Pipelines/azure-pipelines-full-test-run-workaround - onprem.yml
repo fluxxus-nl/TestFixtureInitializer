@@ -12,7 +12,7 @@ pool: TestAutomationExamples
 
 jobs:
 - job: default
-  timeoutInMinutes: 800
+  timeoutInMinutes: 1000
   pool: TestAutomationExamples
 
   steps:
@@ -54,13 +54,13 @@ jobs:
         Library Assert
         Library Variable Storage
         System Application Test Library
+        Tests-TestLibraries
         Tests-Bank
         Tests-Cash Flow
         Tests-Cost Accounting
         Tests-CRM integration
         Tests-Data Exchange
         Tests-Dimension
-        Tests-ERM
         Tests-Fixed Asset
         Tests-General Journal
         Tests-Graph
@@ -120,14 +120,14 @@ jobs:
     displayName: 'ALOPS - Run TestSuite'
     inputs:
       usedocker: true
-      disabledtests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests.json'
+      disabledtests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests\DisabledTests.json'
       import_testtoolkit: false
       import_action: 'Skip'
       testpage: '130455'
       testsuite: 'DEFAULT'
       failed_test_action: 'Ignore'
     continueOnError: true
-    timeoutInMinutes: 800
+    timeoutInMinutes: 900
 
   - task: PublishPipelineArtifact@1
     displayName: 'Publish Artifact Test Results **/TestResults.xml'
@@ -149,4 +149,4 @@ jobs:
     enabled: true
     condition: always()
     inputs:
-      createsqlbackup: 'onfailure'
+      createsqlbackup: '$(createSqlBackup)'

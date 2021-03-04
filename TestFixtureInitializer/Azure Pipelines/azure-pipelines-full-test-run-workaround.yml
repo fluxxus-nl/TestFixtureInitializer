@@ -12,7 +12,7 @@ pool: TestAutomationExamples
 
 jobs:
 - job: default
-  timeoutInMinutes: 600
+  timeoutInMinutes: 1000
   pool: TestAutomationExamples
 
   steps:
@@ -33,6 +33,16 @@ jobs:
     displayName: 'ALOPS - Wait for Docker Container to start'
     inputs:
       search_string: 'Ready for connections!'
+
+  - task: ALOpsDockerExec@1
+    displayName: 'Uninstall MS apps (but leave Application apps)'
+    inputs:
+      inline_script: |
+        Get-NAVAppInfo -ServerInstance BC -tenant default -tenantspecificproperties | 
+          where isinstalled -eq $true | 
+            Where Publisher -eq Microsoft | 
+              where {$_.Name -ne 'Base Application' -and $_.Name -ne 'System Application' -and $_.Name -ne 'Application'}  | 
+                uninstall-navapp -tenant default -force
 
   - task: ALOpsAppPublish@1
     displayName: 'ALOPS - Install AL TestTool' # install necessary dependent apps for testability
@@ -114,14 +124,14 @@ jobs:
     displayName: 'ALOPS - Run TestSuite'
     inputs:
       usedocker: true
-      disabledtests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests.json'
+      disabledtests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests\DisabledTests.json'
       import_testtoolkit: false
       import_action: 'Skip'
       testpage: '130455'
       testsuite: 'DEFAULT'
       failed_test_action: 'Ignore'
     continueOnError: true
-    timeoutInMinutes: 580
+    timeoutInMinutes: 900
 
   - task: PublishPipelineArtifact@1
     displayName: 'Publish Artifact Test Results **/TestResults.xml'
@@ -143,4 +153,4 @@ jobs:
     enabled: true
     condition: always()
     inputs:
-      createsqlbackup: 'onfailure'
+      createsqlbackup: '$(createSqlBackup)'

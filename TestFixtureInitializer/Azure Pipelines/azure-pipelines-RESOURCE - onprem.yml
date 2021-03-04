@@ -97,7 +97,7 @@ jobs:
       import_testtoolkit: false
       import_action: 'Skip'
       testpage: '130455'
-      testsuite: 'RESOURCE'
+      testsuite: 'DEFAULT'
       failed_test_action: 'Ignore'
     continueOnError: true
     timeoutInMinutes: 45
