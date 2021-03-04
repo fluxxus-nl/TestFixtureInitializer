@@ -36,5 +36,6 @@
     { "codeunitId": 135401,"codeunitName": "Fixed Assets Plan-based E2E","method": "FixedAssetJourneyAsEssentialISVEmbUser" },
     { "codeunitId": 135401,"codeunitName": "Fixed Assets Plan-based E2E","method": "FixedAssetJourneyAsExternalAccountant" },
     { "codeunitId": 135401,"codeunitName": "Fixed Assets Plan-based E2E","method": "FixedAssetJourneyAsTeamMember" },
-    { "codeunitId": 135401,"codeunitName": "Fixed Assets Plan-based E2E","method": "FixedAssetJourneyAsTeamMemberISVEmb" }
+    { "codeunitId": 135401,"codeunitName": "Fixed Assets Plan-based E2E","method": "FixedAssetJourneyAsTeamMemberISVEmb" },
+    { "codeunitId": 134920,"codeunitName": "ERM General Journal UT","method": "TestCreateGenJnlBatchPostWebService" }    
 ]
