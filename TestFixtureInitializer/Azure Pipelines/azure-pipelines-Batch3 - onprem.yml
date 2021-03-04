@@ -55,7 +55,7 @@ jobs:
         Library Variable Storage
         System Application Test Library
         Tests-TestLibraries
-        Tests-Data Exchange
+        Tests-Cash Flow
         Test Runner
 
   - task: ALOpsAppCompiler@1
@@ -90,17 +90,17 @@ jobs:
       skip_verification: true   
 
   - task: ALOpsAppTest@1
-    displayName: 'ALOPS - Run TestSuite'
+    displayName: 'ALOPS - Run Tests'
     inputs:
       usedocker: true
-      disabledtests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests\DisabledTests-DATA EXCHANGE.json'
+      disabledtests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests\DisabledTests-Batch3.json' # See https://github.com/fluxxus-nl/TestFixtureInitializer/issues/4
       import_testtoolkit: false
       import_action: 'Skip'
       testpage: '130455'
       testsuite: 'DEFAULT'
       failed_test_action: 'Ignore'
     continueOnError: true
-    timeoutInMinutes: 45
+    timeoutInMinutes: 180
 
   - task: PublishPipelineArtifact@1
     displayName: 'Publish Artifact Test Results **/TestResults.xml'

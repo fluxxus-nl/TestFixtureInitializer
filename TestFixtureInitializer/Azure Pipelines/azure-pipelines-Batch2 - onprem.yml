@@ -56,7 +56,7 @@ jobs:
         System Application Test Library
         Tests-TestLibraries
         Tests-Bank
-        Tests-Cash Flow
+        Tests-Data Exchange
         Test Runner
 
   - task: ALOpsAppCompiler@1
