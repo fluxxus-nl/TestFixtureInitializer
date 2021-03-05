@@ -58,6 +58,7 @@ jobs:
         Tests-Dimension
         Tests-Integration
         Tests-Graph
+        Tests-Permissions
         Test Runner
 
   - task: ALOpsAppCompiler@1
