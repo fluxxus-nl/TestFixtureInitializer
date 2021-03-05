@@ -12,7 +12,7 @@ codeunit 97050 "FLX Tfi Test Install"
     local procedure SetupTestSuites()
     begin
         AddToTestSuite('DEFAULT', '1fb2e583-f2c3-4484-a8d4-387e3adce46d'); //  Tests-Bank
-        AddToTestSuite('DEFAULT', '69837cc7-28e9-4db0-9a0f-6616f259c91a'); //  Tests-Cash Flow
+        // AddToTestSuite('DEFAULT', '69837cc7-28e9-4db0-9a0f-6616f259c91a'); //  Tests-Cash Flow
         AddToTestSuite('DEFAULT', '16419195-5f01-494f-9b02-34363dade478'); //  Tests-Cost Accounting
         AddToTestSuite('DEFAULT', '155bc500-e420-4113-803e-7aa8e8eea112'); //  Tests-CRM integration
         AddToTestSuite('DEFAULT', '85125fdc-eb14-4f16-8c5d-6e4589aceb1d'); //  Tests-Data Exchange
@@ -44,7 +44,7 @@ codeunit 97050 "FLX Tfi Test Install"
         AddToTestSuite('DEFAULT', '9cc7e87b-8ba9-4c23-82d4-8af3e919c84b'); //  Tests-User
         AddToTestSuite('DEFAULT', '0f0955b8-92e2-4ce2-a580-3c4583dde9ae'); //  Tests-VAT
         AddToTestSuite('DEFAULT', 'c4795dd0-aee3-47cc-b020-2ee93a47d4c4'); //  Tests-Workflow
-
+        AddToTestSuite('DEFAULT', '69837cc7-28e9-4db0-9a0f-6616f259c91a'); //  Tests-Cash Flow - moved to last position so its results will not influence other tests
     end;
 
     local procedure AddToTestSuite(SuiteName: Text; ExtensionID: Text)
