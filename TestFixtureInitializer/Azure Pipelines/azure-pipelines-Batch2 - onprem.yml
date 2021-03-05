@@ -59,6 +59,7 @@ jobs:
         Tests-Data Exchange
         Tests-Marketing
         Tests-Permissions
+        Tests-Prepayment
         Test Runner
 
   - task: ALOpsAppCompiler@1
