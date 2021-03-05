@@ -57,7 +57,7 @@ jobs:
         Tests-TestLibraries
         Tests-Invoicing
         Tests-Job
-        Tests-Report
+        Tests-Misc
         Test Runner
 
   - task: ALOpsAppCompiler@1
