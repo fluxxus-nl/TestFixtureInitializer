@@ -57,6 +57,7 @@ jobs:
         Tests-TestLibraries
         Tests-Bank
         Tests-Data Exchange
+        Tests-Marketing
         Tests-Permissions
         Test Runner
 
