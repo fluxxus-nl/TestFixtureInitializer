@@ -57,6 +57,7 @@ jobs:
         Tests-TestLibraries
         Tests-Invoicing
         Tests-Job
+        Tests-SMB
         Tests-Upgrade
         Test Runner
 
