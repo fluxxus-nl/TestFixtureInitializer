@@ -56,7 +56,7 @@ jobs:
         System Application Test Library
         Tests-TestLibraries
         Tests-Invoicing
-        Tests-Workflow
+        Tests-Job
         Test Runner
 
   - task: ALOpsAppCompiler@1
