@@ -37,5 +37,14 @@
     { "codeunitId": 135401,"codeunitName": "Fixed Assets Plan-based E2E","method": "FixedAssetJourneyAsExternalAccountant" },
     { "codeunitId": 135401,"codeunitName": "Fixed Assets Plan-based E2E","method": "FixedAssetJourneyAsTeamMember" },
     { "codeunitId": 135401,"codeunitName": "Fixed Assets Plan-based E2E","method": "FixedAssetJourneyAsTeamMemberISVEmb" },
-    { "codeunitId": 134920,"codeunitName": "ERM General Journal UT","method": "TestCreateGenJnlBatchPostWebService" }
+    { "codeunitId": 134920,"codeunitName": "ERM General Journal UT","method": "TestCreateGenJnlBatchPostWebService" },
+    { "codeunitId": 134100,"codeunitName": "ERM Prepayment","method": "PartShipmentPrepmtFCY" },
+    { "codeunitId": 134101,"codeunitName": "ERM Prepayment II","method": "PurchasePrepmtLineAmountErrorOnPartialPostedInvoice" },
+    { "codeunitId": 134101,"codeunitName": "ERM Prepayment II","method": "PurchPrepmtPartialReceipt" },
+    { "codeunitId": 134101,"codeunitName": "ERM Prepayment II","method": "SalesPrepmtLineAmountErrorOnPartialPostedInvoice" },
+    { "codeunitId": 134103,"codeunitName": "ERM Prepayment IV","method": "PrepaymentInvoiceAndShipSalesOrder" },
+    { "codeunitId": 134103,"codeunitName": "ERM Prepayment IV","method": "PrepaymentInvoiceAndReceivePurchaseOrder" },
+    { "codeunitId": 134106,"codeunitName": "ERM Prepayment V","method": "PostSalesInvoiceAfterGetShipmentLinesWithPrepmtAndAdjustedQtyToInvoiceOnOrder" },
+    { "codeunitId": 134333,"codeunitName": "ERM Purchase Prepayments","method": "PostFCYPurchasePrepayment" },
+    { "codeunitId": 134333,"codeunitName": "ERM Purchase Prepayments","method": "PostFCYPurchPrepCreditMemo" }        
 ]

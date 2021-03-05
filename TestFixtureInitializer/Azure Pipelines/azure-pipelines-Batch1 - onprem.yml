@@ -59,6 +59,7 @@ jobs:
         Tests-CRM integration
         Tests-Fixed Asset
         Tests-General Journal
+        Tests-Prepayment
         Test Runner
 
   - task: ALOpsAppCompiler@1
