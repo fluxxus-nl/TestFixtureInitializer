@@ -18,7 +18,7 @@
     { "codeunitId": 136211,"codeunitName": "Marketing Matrix Management","method": "*" },
     { "codeunitId": 136212,"codeunitName": "Marketing Contacts Search II","method": "DuplicateSearchStringSetupFieldNameLookup" },
     { "codeunitId": 136213,"codeunitName": "Marketing Segment","method": "InteractionTemplateCodeValidateHdrWhenConfirmUpdateSegLines" },
-    { "codeunitId": 136216,"codeunitName": "Marketing Cues","method": "ContactsDuplicate" }        
+    { "codeunitId": 136216,"codeunitName": "Marketing Cues","method": "ContactsDuplicate" },
     { "codeunitId": 132532,"codeunitName": "Test Granules","method": "AllAppObjectsAreInPermissionSet" },
     { "codeunitId": 132532,"codeunitName": "Test Granules","method": "AllLocalAppObjectsAreInLocalPermissionSet" },
     { "codeunitId": 132532,"codeunitName": "Test Granules","method": "AllLocalAppObjectsAreInO365BusFullPermissionSet" },
