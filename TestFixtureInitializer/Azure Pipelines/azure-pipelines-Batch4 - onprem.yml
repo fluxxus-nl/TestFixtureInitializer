@@ -59,6 +59,7 @@ jobs:
         Tests-Integration
         Tests-Graph
         Tests-Monitor Sensitive Fields
+        Tests-Physical Inventory
         Test Runner
 
   - task: ALOpsAppCompiler@1
