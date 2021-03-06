@@ -59,7 +59,7 @@ jobs:
         Tests-Data Exchange
         Tests-Marketing
         Tests-Permissions
-        Tests-User
+        Tests-SMTP
         Test Runner
 
   - task: ALOpsAppCompiler@1
