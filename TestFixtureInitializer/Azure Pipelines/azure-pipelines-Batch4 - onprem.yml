@@ -58,8 +58,8 @@ jobs:
         Tests-Dimension
         Tests-Integration
         Tests-Graph
-        Tests-Misc
         Tests-Monitor Sensitive Fields
+        Tests-Prepayment
         Tests-Physical Inventory
         Test Runner
 
