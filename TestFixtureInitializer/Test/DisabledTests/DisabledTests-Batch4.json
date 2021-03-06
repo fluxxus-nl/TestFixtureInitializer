@@ -448,5 +448,5 @@
     { "codeunitId": 139085,"codeunitName": "Exchange Sync Credentials Test","method": "ExchangeContactSyncHidesPasswordFieldIfTokenAvailable" },
     { "codeunitId": 139085,"codeunitName": "Exchange Sync Credentials Test","method": "ExchangeContactSyncShowsPasswordFieldIfTokenNotAvailable" },
     { "codeunitId": 139085,"codeunitName": "Exchange Sync Credentials Test","method": "UserCanProceedWithNoPasswordWhenTokenAvailable" },
-    { "codeunitId": 139085,"codeunitName": "Exchange Sync Credentials Test","method": "UserMustEnterPasswordToProceedWhenTokenNotAvailable" },
+    { "codeunitId": 139085,"codeunitName": "Exchange Sync Credentials Test","method": "UserMustEnterPasswordToProceedWhenTokenNotAvailable" }
 ]
