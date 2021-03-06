@@ -59,7 +59,7 @@ jobs:
         Tests-Job
         Tests-SMB
         Tests-Upgrade
-        Tests-User
+        Tests-VAT
         Test Runner
 
   - task: ALOpsAppCompiler@1
