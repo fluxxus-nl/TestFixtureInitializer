@@ -244,6 +244,15 @@
     { "codeunitId": 136354,"codeunitName": "UT T Job WIP Method","method": "UTErrorOnValidateWIPCostJobWIPMethod" },
     { "codeunitId": 136906,"codeunitName": "Job Reports","method": "JobWIPToGLAfterJobPostWIPToGL" },
     { "codeunitId": 136909,"codeunitName": "Job Posting","method": "PurchaseOrderFCYWithJob" },
+    { "codeunitId": 134100,"codeunitName": "ERM Prepayment","method": "PartShipmentPrepmtFCY" },
+    { "codeunitId": 134101,"codeunitName": "ERM Prepayment II","method": "PurchasePrepmtLineAmountErrorOnPartialPostedInvoice" },
+    { "codeunitId": 134101,"codeunitName": "ERM Prepayment II","method": "PurchPrepmtPartialReceipt" },
+    { "codeunitId": 134101,"codeunitName": "ERM Prepayment II","method": "SalesPrepmtLineAmountErrorOnPartialPostedInvoice" },
+    { "codeunitId": 134103,"codeunitName": "ERM Prepayment IV","method": "PrepaymentInvoiceAndReceivePurchaseOrder" },
+    { "codeunitId": 134103,"codeunitName": "ERM Prepayment IV","method": "PrepaymentInvoiceAndShipSalesOrder" },
+    { "codeunitId": 134106,"codeunitName": "ERM Prepayment V","method": "PostSalesInvoiceAfterGetShipmentLinesWithPrepmtAndAdjustedQtyToInvoiceOnOrder" },
+    { "codeunitId": 134333,"codeunitName": "ERM Purchase Prepayments","method": "PostFCYPurchasePrepayment" },
+    { "codeunitId": 134333,"codeunitName": "ERM Purchase Prepayments","method": "PostFCYPurchPrepCreditMemo" },
     { "codeunitId": 138003,"codeunitName": "O365 Sales Calc Disc By Type","method": "GetCustInvoiceDiscPctWhenInvDiscTypeIsAmount" },
     { "codeunitId": 138009,"codeunitName": "O365 Customer Statistics","method": "AmountOnOrders" },
     { "codeunitId": 138009,"codeunitName": "O365 Customer Statistics","method": "AmountOnQuotes" },
@@ -262,5 +271,5 @@
     { "codeunitId": 139126,"codeunitName": "O365 Activites Tests","method": "DrillDownCalcOverdueSalesInvoiceAmount" },
     { "codeunitId": 139126,"codeunitName": "O365 Activites Tests","method": "DrillDownSalesThisMonth" },
     { "codeunitId": 139126,"codeunitName": "O365 Activites Tests","method": "OverduePurchInvoiceRemainingAmountLCYSortingTest" },
-    { "codeunitId": 139126,"codeunitName": "O365 Activites Tests","method": "OverdueSalesInvoiceRemainingAmountLCYSortingTest" }        
+    { "codeunitId": 139126,"codeunitName": "O365 Activites Tests","method": "OverdueSalesInvoiceRemainingAmountLCYSortingTest" }
 ]
