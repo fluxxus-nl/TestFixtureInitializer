@@ -59,6 +59,7 @@ jobs:
         Tests-CRM integration
         Tests-Fixed Asset
         Tests-General Journal
+        Tests-Rapid Start
         Tests-Resource
         Test Runner
 
