@@ -102,5 +102,9 @@
     { "codeunitId": 134090,"codeunitName": "ERM Pmt Disc And VAT Cust/Vend","method": "SalesPmtDiscountWithVAT" },
     { "codeunitId": 134908,"codeunitName": "ERM VAT Serv. Charge","method": "BlankPurchLineServiceCharge" },
     { "codeunitId": 134908,"codeunitName": "ERM VAT Serv. Charge","method": "PurchaseOrderPostWithPrepmtAndServChargeLine" },
-    { "codeunitId": 134908,"codeunitName": "ERM VAT Serv. Charge","method": "SalesOrderPostWithPrepmtAndServChargeLine" }
+    { "codeunitId": 134908,"codeunitName": "ERM VAT Serv. Charge","method": "SalesOrderPostWithPrepmtAndServChargeLine" },
+    { "codeunitId": 134140,"codeunitName": "ERM Bank Acc Ledger Reversal","method": "BankAccount36x105mm2Columns" },
+    { "codeunitId": 134140,"codeunitName": "ERM Bank Acc Ledger Reversal","method": "BankAccount37x105mm2Columns" },
+    { "codeunitId": 134140,"codeunitName": "ERM Bank Acc Ledger Reversal","method": "BankAccount37x70mm3Columns" },
+    { "codeunitId": 134140,"codeunitName": "ERM Bank Acc Ledger Reversal","method": "BankAccountLabel36x70mm3Columns" }        
 ]
