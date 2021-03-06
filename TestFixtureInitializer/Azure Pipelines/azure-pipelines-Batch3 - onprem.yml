@@ -57,9 +57,9 @@ jobs:
         Tests-TestLibraries
         Tests-Invoicing
         Tests-Job
-        Tests-Prepayment
         Tests-SMB
         Tests-Upgrade
+        Tests-User
         Test Runner
 
   - task: ALOpsAppCompiler@1
