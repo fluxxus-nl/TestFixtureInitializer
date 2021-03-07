@@ -55,7 +55,7 @@ jobs:
         Library Variable Storage
         System Application Test Library
         Tests-TestLibraries
-        Tests-Report
+        Tests-SMB
         Tests-Workflow
         Test Runner
 
