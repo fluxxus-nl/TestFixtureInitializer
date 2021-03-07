@@ -55,8 +55,8 @@ jobs:
         Library Variable Storage
         System Application Test Library
         Tests-TestLibraries
-        Tests-Cash Flow
         Tests-Misc
+        Tests-Report
         Test Runner
 
   - task: ALOpsAppCompiler@1
