@@ -59,7 +59,6 @@ jobs:
         Tests-Data Exchange
         Tests-Marketing
         Tests-Permissions
-        Tests-SMB
         Tests-SMTP
         Test Runner
 
