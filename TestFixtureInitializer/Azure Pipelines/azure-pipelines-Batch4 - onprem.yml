@@ -60,7 +60,6 @@ jobs:
         Tests-Graph
         Tests-Monitor Sensitive Fields
         Tests-Physical Inventory
-        Tests-SMB
         Test Runner
 
   - task: ALOpsAppCompiler@1
