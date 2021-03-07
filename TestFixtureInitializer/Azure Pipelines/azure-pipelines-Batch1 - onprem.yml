@@ -62,7 +62,6 @@ jobs:
         Tests-Rapid Start
         Tests-Resource
         Tests-Reverse
-        Tests-User
         Test Runner
 
   - task: ALOpsAppCompiler@1
