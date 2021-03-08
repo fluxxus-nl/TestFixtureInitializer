@@ -61,7 +61,6 @@ jobs:
         Tests-Monitor Sensitive Fields
         Tests-Physical Inventory
         Tests-User
-        Tests-VAT
         Test Runner
 
   - task: ALOpsAppCompiler@1
