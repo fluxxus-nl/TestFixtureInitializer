@@ -1,6 +1,6 @@
 parameters:
   navAppVersion: '1.0.[yyyyWW].*'
-  runTestSuite: 'true'
+  runTestSuite: true
   disabledTests: ''
   createSqlBackup: 'disabled'
 
@@ -51,16 +51,16 @@ steps:
   timeoutInMinutes: 45
 
 - task: PublishPipelineArtifact@1
-  enabled: ${{ parameters['run_test_suite'] }}
   displayName: 'Publish Artifact Test Results **/TestResults.xml'
+  enabled: ${{ parameters['runTestSuite'] }}
   inputs:
     targetPath: '$(System.DefaultWorkingDirectory)/TestResults.xml'
     artifact: 'TestResults.xml'
     publishLocation: 'pipeline'
 
 - task: PublishTestResults@2
-  enabled: ${{ parameters['run_test_suite'] }}
   displayName: 'Publish Test Results **/TestResults.xml'
+  enabled: ${{ parameters['runTestSuite'] }}
   inputs:
     testResultsFormat: XUnit
     testResultsFiles: '**/TestResults.xml'

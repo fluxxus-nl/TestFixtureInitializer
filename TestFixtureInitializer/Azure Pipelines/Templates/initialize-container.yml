@@ -1,16 +1,16 @@
 parameters:
-  forceCreateImage: ''
+  forceCreateImage: false
   licenseUrl: ''
 
 steps:          
 - task: ALOpsDockerCreate@1
-  displayName: 'ALOPS - Create Docker Image' # It will reuse the image if already exists, or build one if it doesn't.
+  displayName: 'ALOPS - Create Docker Image'
   inputs:
     forcecreateimage: ${{ parameters['forceCreateImage'] }}
     licensefile: ${{ parameters['licenseUrl'] }}
 
 - task: ALOpsDockerStart@1
-  displayName: 'ALOPS - Start Docker Container' # No need to provide any details - it will get the details from previous step
+  displayName: 'ALOPS - Start Docker Container'
 
 - task: ALOpsDockerWait@1
   displayName: 'ALOPS - Wait for Docker Container to start'
@@ -28,7 +28,7 @@ steps:
               uninstall-navapp -tenant default -force
 
 - task: ALOpsAppPublish@1
-  displayName: 'ALOPS - Install AL TestTool' # install necessary dependent apps for testability
+  displayName: 'ALOPS - Install AL TestTool'
   inputs:
     usedocker: true
     installaltesttool: true
