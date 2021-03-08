@@ -26,7 +26,7 @@ stages:
         pool: TestAutomationExamples
         steps:
           ### Initialize Container
-          - template: $(Build.SourcesDirectory)\TestFixtureInitializer\Aure Pipeline Templates\initialize-container.yml
+          - template: $(Build.SourcesDirectory)\TestFixtureInitializer\Azure Pipeline Templates\initialize-container.yml
             parameters:
               forceCreateImage: $(forceCreateImage)
               licenseUrl: $(LuxBeheerBcDevLicense)
@@ -42,7 +42,7 @@ stages:
                 Tests-Cash Flow
 
           ### Compile and Cleanup
-          - template: $(Build.SourcesDirectory)\TestFixtureInitializer\Aure Pipeline Templates\compile-publish.yml
+          - template: $(Build.SourcesDirectory)\TestFixtureInitializer\Azure Pipeline Templates\compile-publish.yml
             parameters:
               navAppVersion: '1.0.[yyyyWW].*'
               runTestSuite: true
