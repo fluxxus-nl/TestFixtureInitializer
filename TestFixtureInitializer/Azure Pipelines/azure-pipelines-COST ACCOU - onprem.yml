@@ -10,7 +10,7 @@ variables:
 
 stages:  
   - stage: Build
-jobs:
+    jobs:
       - job: Build
         timeoutInMinutes: 240
         pool: TestAutomationExamples
@@ -23,7 +23,7 @@ jobs:
 
           ### install specific test apps
           - task: ALOpsAppPublish@1
-                    displayName: 'ALOPS - Install specific test app(s)' 
+            displayName: 'ALOPS - Install specific test app(s)' 
             inputs:
               usedocker: true
               installaltesttool: true
