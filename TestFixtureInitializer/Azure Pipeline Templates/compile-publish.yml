@@ -45,8 +45,6 @@ steps:
     testpage: '130455'
     testsuite: 'DEFAULT'
     failed_test_action: 'Ignore'
-  continueOnError: true
-  timeoutInMinutes: 45
 
 - task: PublishPipelineArtifact@1
   displayName: 'Publish Artifact Test Results **/TestResults.xml'
