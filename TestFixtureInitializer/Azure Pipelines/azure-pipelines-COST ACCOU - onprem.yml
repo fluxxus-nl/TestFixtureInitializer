@@ -13,8 +13,8 @@ stages:
 jobs:
       - job: Build
         timeoutInMinutes: 240
-  pool: TestAutomationExamples
-  steps:
+        pool: TestAutomationExamples
+        steps:
           ### Initialize Container
           - template: ./Templates/initialize-container.yml
             parameters:
@@ -22,14 +22,14 @@ jobs:
               licenseUrl: $(LuxBeheerBcDevLicense)
 
           ### install specific test apps
-  - task: ALOpsAppPublish@1
-            displayName: 'ALOPS - Install specific test app(s)' 
-    inputs:
-      usedocker: true
-      installaltesttool: true
-      skip_verification: true
-      install_al_app_names: |
-        Tests-Cost Accounting
+          - task: ALOpsAppPublish@1
+                    displayName: 'ALOPS - Install specific test app(s)' 
+            inputs:
+              usedocker: true
+              installaltesttool: true
+              skip_verification: true
+              install_al_app_names: |
+                Tests-Cost Accounting
 
           ### Compile and Cleanup
           - template: ./Templates/compile-publish.yml
