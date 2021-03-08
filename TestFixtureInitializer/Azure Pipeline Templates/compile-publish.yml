@@ -1,6 +1,5 @@
 parameters:
   navAppVersion: '1.0.[yyyyWW].*'
-  runTestSuite: 'true'
   disabledTests: ''
   createSqlBackup: 'disabled'
 
@@ -38,7 +37,6 @@ steps:
 
 - task: ALOpsAppTest@1
   displayName: 'ALOPS - Run TestSuite'
-  enabled: ${{ parameters['runTestSuite'] }}
   inputs:
     usedocker: true
     disabledtests: ${{ parameters['disabledTests'] }}
@@ -51,7 +49,6 @@ steps:
   timeoutInMinutes: 45
 
 - task: PublishPipelineArtifact@1
-  enabled: ${{ parameters['runTestSuite'] }}
   displayName: 'Publish Artifact Test Results **/TestResults.xml'
   inputs:
     targetPath: '$(System.DefaultWorkingDirectory)/TestResults.xml'
@@ -59,7 +56,6 @@ steps:
     publishLocation: 'pipeline'
 
 - task: PublishTestResults@2
-  enabled: ${{ parameters['runTestSuite'] }}
   displayName: 'Publish Test Results **/TestResults.xml'
   inputs:
     testResultsFormat: XUnit
