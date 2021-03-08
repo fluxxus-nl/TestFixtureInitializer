@@ -23,6 +23,7 @@ stages:
   - stage: Build
     jobs:
       - job: Build
+        timeoutInMinutes: 240
         pool: TestAutomationExamples
         steps:
           ### Initialize Container
