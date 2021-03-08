@@ -46,4 +46,4 @@ stages:
             parameters:
               navAppVersion: '1.0.[yyyyWW].*'
               disabledTests: '$(Build.SourcesDirectory)/TestFixtureInitializer/Test/DisabledTests/DisabledTests-CASH FLOW.json'
-              createsqlbackup: '$(createSqlBackup)'
+              createSqlbackup: '$(createSqlBackup)'
