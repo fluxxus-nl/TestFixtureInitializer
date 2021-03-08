@@ -8,17 +8,6 @@ trigger:
 variables:
 - group: 'PipelineVariables'
 
-# pool: TestAutomationExamples
-
-# jobs:
-# - job: default
-#   timeoutInMinutes: 240
-#   pool: TestAutomationExamples
-
-#   steps:
-#   - checkout: self
-#     clean: true 
-
 stages:  
   - stage: Build
     jobs:
