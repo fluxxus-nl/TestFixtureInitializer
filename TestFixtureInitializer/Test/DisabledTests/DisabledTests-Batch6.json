@@ -1,4 +1,13 @@
 [
+    { "codeunitId": 134100,"codeunitName": "ERM Prepayment","method": "PartShipmentPrepmtFCY" },
+    { "codeunitId": 134101,"codeunitName": "ERM Prepayment II","method": "PurchasePrepmtLineAmountErrorOnPartialPostedInvoice" },
+    { "codeunitId": 134101,"codeunitName": "ERM Prepayment II","method": "PurchPrepmtPartialReceipt" },
+    { "codeunitId": 134101,"codeunitName": "ERM Prepayment II","method": "SalesPrepmtLineAmountErrorOnPartialPostedInvoice" },
+    { "codeunitId": 134103,"codeunitName": "ERM Prepayment IV","method": "PrepaymentInvoiceAndReceivePurchaseOrder" },
+    { "codeunitId": 134103,"codeunitName": "ERM Prepayment IV","method": "PrepaymentInvoiceAndShipSalesOrder" },
+    { "codeunitId": 134106,"codeunitName": "ERM Prepayment V","method": "PostSalesInvoiceAfterGetShipmentLinesWithPrepmtAndAdjustedQtyToInvoiceOnOrder" },
+    { "codeunitId": 134333,"codeunitName": "ERM Purchase Prepayments","method": "PostFCYPurchasePrepayment" },
+    { "codeunitId": 134333,"codeunitName": "ERM Purchase Prepayments","method": "PostFCYPurchPrepCreditMemo" },
     { "codeunitId": 133769,"codeunitName": "Daily Report Tests","method": "DayBookVATEntryCustomerVendorWithSameNos" },
     { "codeunitId": 133769,"codeunitName": "Daily Report Tests","method": "OnAfterGetRecordLedgerEntryDayBookVendorLedgerEntry" },
     { "codeunitId": 134336,"codeunitName": "ERM Purch. Doc. Reports - II","method": "VendorLabel36x105mm2Columns" },
@@ -37,18 +46,5 @@
     { "codeunitId": 134984,"codeunitName": "ERM Sales Report III","method": "PrintProFormaInvoice" },
     { "codeunitId": 134986,"codeunitName": "ERM Financial Reports II","method": "*" },
     { "codeunitId": 136905,"codeunitName": "Service Reports - II","method": "ServiceProfitOrdersShowDetailMultiLines" },
-    { "codeunitId": 136908,"codeunitName": "Report Settings","method": "CancelOnPickReport" },
-    { "codeunitId": 134025,"codeunitName": "ERM Unrealized VAT Customer","method": "ApplyPaymentToInvoice" },
-    { "codeunitId": 134025,"codeunitName": "ERM Unrealized VAT Customer","method": "ThreePartialPaymentsOfUnrealVATSalesInvoiceWithThreeLines" },
-    { "codeunitId": 134026,"codeunitName": "ERM Unrealized VAT Vendor","method": "UnrealizedVATWithCreditMemo" },
-    { "codeunitId": 134029,"codeunitName": "ERM VAT On Gen Journal Line","method": "PositiveVATDiffOnGenJnlLine" },
-    { "codeunitId": 134051,"codeunitName": "ERM VAT Tool - Sales Doc","method": "VATToolSalesBlOrdMakePShpMake" },
-    { "codeunitId": 134052,"codeunitName": "ERM VAT Tool - Purch. Doc","method": "VATToolPurchaseBlOrdMakePShpMk" },
-    { "codeunitId": 134053,"codeunitName": "ERM VAT Tool - Serv. Doc","method": "VATToollServOrderPartShipAndConsume" },
-    { "codeunitId": 134090,"codeunitName": "ERM Pmt Disc And VAT Cust/Vend","method": "FullVATCustomerInvoiceWithPmtApplWithAdjustForPmtDisc" },
-    { "codeunitId": 134090,"codeunitName": "ERM Pmt Disc And VAT Cust/Vend","method": "FullVATVendorInvoiceWithPmtApplWithAdjustForPmtDisc" },
-    { "codeunitId": 134090,"codeunitName": "ERM Pmt Disc And VAT Cust/Vend","method": "SalesPmtDiscountWithVAT" },
-    { "codeunitId": 134908,"codeunitName": "ERM VAT Serv. Charge","method": "BlankPurchLineServiceCharge" },
-    { "codeunitId": 134908,"codeunitName": "ERM VAT Serv. Charge","method": "PurchaseOrderPostWithPrepmtAndServChargeLine" },
-    { "codeunitId": 134908,"codeunitName": "ERM VAT Serv. Charge","method": "SalesOrderPostWithPrepmtAndServChargeLine" }
+    { "codeunitId": 136908,"codeunitName": "Report Settings","method": "CancelOnPickReport" }
 ]
