@@ -46,5 +46,6 @@ stages:
           - template: ./Templates/compile-publish.yml
             parameters:
               navAppVersion: '1.0.[yyyyWW].*'
+              runTestSuite: true
               disabledTests: '$(Build.SourcesDirectory)/TestFixtureInitializer/Test/DisabledTests/DisabledTests-CASH FLOW.json'
               createSqlbackup: '$(createSqlBackup)'
