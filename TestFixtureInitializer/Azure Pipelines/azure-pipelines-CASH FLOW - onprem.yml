@@ -26,25 +26,25 @@ stages:
         pool: TestAutomationExamples
         steps:
           ### Initialize Container
-          - template: $(Build.SourcesDirectory)\TestFixtureInitializer\Aure Pipeline Templates\initialize-container.yml@templates
+          - template: ./Azure Pipeline Templates/initialize-container.yml
             parameters:
               forceCreateImage: $(forceCreateImage)
               licenseUrl: $(LuxBeheerBcDevLicense)
 
           ### install specific test apps
-        - task: ALOpsAppPublish@1
-          displayName: 'ALOPS - Install specific test app(s)' 
-          inputs:
-            usedocker: true
-            installaltesttool: true
-            skip_verification: true
-            install_al_app_names: |
-              Tests-Cash Flow
+          - task: ALOpsAppPublish@1
+            displayName: 'ALOPS - Install specific test app(s)' 
+            inputs:
+              usedocker: true
+              installaltesttool: true
+              skip_verification: true
+              install_al_app_names: |
+                Tests-Cash Flow
 
           ### Compile and Cleanup
-          - template: $(Build.SourcesDirectory)\TestFixtureInitializer\Aure Pipeline Templates\compile-publish.yml@templates
+          - template: ./Azure Pipeline Templates/compile-publish.yml
             parameters:
               navAppVersion: '1.0.[yyyyWW].*'
               runTestSuite: true
-              disabledTests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests\DisabledTests-CASH FLOW.json'
+              disabledTests: '$(Build.SourcesDirectory)/TestFixtureInitializer/Test/DisabledTests/DisabledTests-CASH FLOW.json'
               createsqlbackup: '$(createSqlBackup)'
