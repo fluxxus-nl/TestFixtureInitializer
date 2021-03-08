@@ -8,118 +8,33 @@ trigger:
 variables:
 - group: 'PipelineVariables'
 
-pool: TestAutomationExamples
+stages:  
+  - stage: Build
+    jobs:
+      - job: Build
+        timeoutInMinutes: 360
+        pool: TestAutomationExamples
+        steps:
+          ### Initialize Container
+          - template: ./Templates/initialize-container.yml
+            parameters:
+              forceCreateImage: $(forceCreateImage)
+              licenseUrl: $(LuxBeheerBcDevLicense)
 
-jobs:
-- job: default
-  timeoutInMinutes: 240
-  pool: TestAutomationExamples
+          ### install specific test apps
+          - task: ALOpsAppPublish@1
+            displayName: 'ALOPS - Install specific test app(s)' 
+            inputs:
+              usedocker: true
+              installaltesttool: true
+              skip_verification: true
+              install_al_app_names: |
+                Tests-Job
 
-  steps:
-  - checkout: self
-    clean: true 
-
-  - task: ALOpsDockerCreate@1
-    displayName: 'ALOPS - Create Docker Image' # It will reuse the image if already exists, or build one if it doesn't.
-    inputs:
-      forcecreateimage: $(forceCreateImage)
-      licensefile: '$(LuxBeheerBcDevLicense)'
-
-  - task: ALOpsDockerStart@1
-    displayName: 'ALOPS - Start Docker Container' # No need to provide any details - it will get the details from previous step
-
-  - task: ALOpsDockerWait@1
-    displayName: 'ALOPS - Wait for Docker Container to start'
-    inputs:
-      search_string: 'Ready for connections!'
-
-  - task: ALOpsDockerExec@1
-    displayName: 'Uninstall MS apps (but leave Application apps)'
-    inputs:
-      inline_script: |
-        Get-NAVAppInfo -ServerInstance BC -tenant default -tenantspecificproperties | 
-          where isinstalled -eq $true | 
-            Where Publisher -eq Microsoft | 
-              where {$_.Name -ne 'Base Application' -and $_.Name -ne 'System Application' -and $_.Name -ne 'Application'}  | 
-                uninstall-navapp -tenant default -force
-
-  - task: ALOpsAppPublish@1
-    displayName: 'ALOPS - Install AL TestTool' # install necessary dependent apps for testability
-    inputs:
-      usedocker: true
-      installaltesttool: true
-      skip_verification: true
-      install_al_app_names: |
-        Any
-        Library Assert
-        Library Variable Storage
-        System Application Test Library
-        Tests-TestLibraries
-        Tests-Job
-        Test Runner
-
-  - task: ALOpsAppCompiler@1
-    displayName: 'ALOPS - Compile Extension: App'
-    inputs:
-      usedocker: true
-      nav_app_version: '1.0.[yyyyWW].*'
-      targetproject: 'TestFixtureInitializer/app/app.json'
-      app_file_suffix: '_APP'                                 # A trick to uniquely identify the APP (from the TEST-app)
-
-  - task: ALOpsAppPublish@1
-    displayName: 'ALOPS - Publish Extension'
-    inputs:
-      usedocker: true
-      nav_artifact_app_filter: '*.app'
-      skip_verification: true
-
-  - task: ALOpsAppCompiler@1
-    displayName: 'ALOPS - Compile Extension: Test-App'
-    inputs:
-      usedocker: true
-      nav_app_version: '1.0.[yyyyWW].*'
-      targetproject: 'TestFixtureInitializer/test/app.json'
-      failed_on_warnings: true    
-      app_file_suffix: '_TEST'                                 # A trick to uniquely identify the Test-App (from the App)
-
-  - task: ALOpsAppPublish@1
-    displayName: 'ALOPS - Publish Extension'
-    inputs:
-      usedocker: true
-      nav_artifact_app_filter: '*.app'
-      skip_verification: true   
-
-  - task: ALOpsAppTest@1
-    displayName: 'ALOPS - Run TestSuite'
-    inputs:
-      usedocker: true
-      disabledtests: '$(Build.SourcesDirectory)\TestFixtureInitializer\Test\DisabledTests\DisabledTests-JOB.json'
-      import_testtoolkit: false
-      import_action: 'Skip'
-      testpage: '130455'
-      testsuite: 'DEFAULT'
-      failed_test_action: 'Ignore'
-    continueOnError: true
-    timeoutInMinutes: 45
-
-  - task: PublishPipelineArtifact@1
-    displayName: 'Publish Artifact Test Results **/TestResults.xml'
-    inputs:
-      targetPath: '$(System.DefaultWorkingDirectory)/TestResults.xml'
-      artifact: 'TestResults.xml'
-      publishLocation: 'pipeline'
-
-  - task: PublishTestResults@2
-    displayName: 'Publish Test Results **/TestResults.xml'
-    inputs:
-      testResultsFormat: XUnit
-      testResultsFiles: '**/TestResults.xml'
-      failTaskOnFailedTests: true
-      testRunTitle: 'BC Test Results: $(Build.BuildId)'
-
-  - task: ALOpsDockerRemove@1
-    displayName: 'ALOPS - Remove Docker Container'
-    enabled: true
-    condition: always()
-    inputs:
-      createsqlbackup: '$(createSqlBackup)'
+          ### Compile and Cleanup
+          - template: ./Templates/compile-publish.yml
+            parameters:
+              navAppVersion: '1.0.[yyyyWW].*'
+              runTestSuite: true
+              disabledTests: '$(Build.SourcesDirectory)/TestFixtureInitializer/Test/DisabledTests/DisabledTests-JOB.json'
+              createSqlbackup: '$(createSqlBackup)'
