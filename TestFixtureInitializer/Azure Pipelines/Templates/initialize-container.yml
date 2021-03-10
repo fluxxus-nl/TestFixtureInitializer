@@ -1,4 +1,6 @@
 parameters:
+  artifactVersion: ''
+  artifactCountry: ''
   forceCreateImage: false
   licenseUrl: ''
 
@@ -6,6 +8,8 @@ steps:
 - task: ALOpsDockerCreate@1
   displayName: 'ALOPS - Create Docker Image'
   inputs:
+    artifactversion: ${{ parameters['artifactVersion'] }}
+    artifactcountry: ${{ parameters['artifactCountry'] }}
     forcecreateimage: ${{ parameters['forceCreateImage'] }}
     licensefile: ${{ parameters['licenseUrl'] }}
 
