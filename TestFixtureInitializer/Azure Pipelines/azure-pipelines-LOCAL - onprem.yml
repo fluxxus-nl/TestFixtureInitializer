@@ -18,6 +18,8 @@ stages:
           ### Initialize Container
           - template: ./Templates/initialize-container.yml
             parameters:
+              artifactversion: $(artifactVersion)
+              artifactcountry: $(artifactCountry)
               forceCreateImage: $(forceCreateImage)
               licenseUrl: $(LuxBeheerBcDevLicense)
 
