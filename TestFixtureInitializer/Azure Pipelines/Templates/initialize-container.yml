@@ -6,12 +6,31 @@ parameters:
 
 steps:          
 - task: ALOpsDockerCreate@1
-  displayName: 'ALOPS - Create Docker Image'
+  condition: and(ne(variables.artifactVersion, ''), ne(variables.artifactCountry, ''))
+  displayName: "ALOPS - Create Docker Image - Version"
   inputs:
-    artifactversion: ${{ parameters['artifactVersion'] }}
-    artifactcountry: ${{ parameters['artifactCountry'] }}
-    forcecreateimage: ${{ parameters['forceCreateImage'] }}
-    licensefile: ${{ parameters['licenseUrl'] }}
+    artifactversion: ${{ parameters.artifactVersion }}
+    artifactcountry: ${{ parameters.artifactCountry }}
+    forcecreateimage: ${{ parameters.forceCreateImage }}
+    licensefile: ${{ parameters.licenseUrl }} 
+
+- task: ALOpsDockerCreate@1
+  condition: and(eq(variables.artifactVersion, ''), ne(variables.artifactCountry, ''))
+  displayName: "ALOPS - Create Docker Image - Latest"
+  inputs:
+    artifactcountry: ${{ parameters.artifactCountry }}
+    versionselect: 'Latest'
+    forcecreateimage: ${{ parameters.forceCreateImage }}
+    licensefile: ${{ parameters.licenseUrl }}
+
+- task: ALOpsDockerCreate@1
+  condition: and(eq(variables.artifactVersion, ''), eq(variables.artifactCountry, ''))
+  displayName: "ALOPS - Create Docker Image - Latest"
+  inputs:
+    artifactcountry: 'w1'
+    versionselect: 'Latest'
+    forcecreateimage: ${{ parameters.forceCreateImage }}
+    licensefile: ${{ parameters.licenseUrl }}
 
 - task: ALOpsDockerStart@1
   displayName: 'ALOPS - Start Docker Container'
