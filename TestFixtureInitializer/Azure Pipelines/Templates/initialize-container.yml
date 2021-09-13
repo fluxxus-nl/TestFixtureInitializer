@@ -2,6 +2,7 @@ parameters:
   artifactVersion: ''
   artifactCountry: ''
   forceCreateImage: false
+  uninstallMsApps: true
   licenseUrl: ''
 
 steps:          
@@ -41,6 +42,7 @@ steps:
     search_string: 'Ready for connections!'
 
 - task: ALOpsDockerExec@1
+  condition: eq(variables.uninstallMsApps, 'true')
   displayName: 'ALOPS - Uninstall MS apps (but leave Application apps)'
   inputs:
     inline_script: |
