@@ -21,6 +21,7 @@ stages:
               artifactversion: $(artifactVersion)
               artifactcountry: $(artifactCountry)
               forceCreateImage: $(forceCreateImage)
+              uninstallMsApps: false
               licenseUrl: $(LuxBeheerBcDevLicense)
 
           ### install specific test apps
