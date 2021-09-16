@@ -64,4 +64,5 @@ steps:
       Library Variable Storage
       System Application Test Library
       Tests-TestLibraries
+      Permissions Mock
       Test Runner
