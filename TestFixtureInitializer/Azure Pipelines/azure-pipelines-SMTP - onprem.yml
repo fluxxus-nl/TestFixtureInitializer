@@ -13,7 +13,7 @@ stages:
     jobs:
       - job: Build
         timeoutInMinutes: 360
-        pool: TestAutomationExamples
+        pool: Default
         steps:
           ### Initialize Container
           - template: ./Templates/initialize-container.yml
