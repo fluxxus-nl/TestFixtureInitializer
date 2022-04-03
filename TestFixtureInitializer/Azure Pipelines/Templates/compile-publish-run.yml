@@ -1,0 +1,91 @@
+parameters:
+  navAppVersion: '1.0.[yyyyWW].*'
+  runTestSuite: true
+  disabledTests: ''
+  useDisabledTests : true
+  createSqlBackup: 'disabled'
+
+steps:   
+- task: ALOpsAppCompiler@1
+  displayName: 'ALOPS - Compile Extension: App'
+  inputs:
+    usedocker: true
+    nav_app_version: ${{ parameters['navAppVersion'] }}
+    targetproject: 'TestFixtureInitializer/app/app.json'
+    app_file_suffix: '_APP'
+
+- task: ALOpsAppPublish@1
+  displayName: 'ALOPS - Publish Extension'
+  inputs:
+    usedocker: true
+    nav_artifact_app_filter: '*.app'
+    skip_verification: true
+
+- task: ALOpsAppCompiler@1
+  displayName: 'ALOPS - Compile Extension: Test-App'
+  inputs:
+    usedocker: true
+    nav_app_version: ${{ parameters['navAppVersion'] }}
+    targetproject: 'TestFixtureInitializer/test/app.json'
+    failed_on_warnings: true    
+    app_file_suffix: '_TEST'
+
+- task: ALOpsAppPublish@1
+  displayName: 'ALOPS - Publish Extension'
+  inputs:
+    usedocker: true
+    nav_artifact_app_filter: '*.app'
+    skip_verification: true   
+
+- task: ALOpsAppTest@1
+  displayName: 'ALOPS - Run TestSuite'
+  condition: eq(variables.useDisabledTests, false)
+  enabled: ${{ parameters['runTestSuite'] }}
+  inputs:
+    usedocker: true
+    import_testtoolkit: false
+    import_action: 'Skip'
+    testpage: '130455'
+    testsuite: 'DEFAULT'
+    failed_test_action: 'Ignore'
+  continueOnError: true
+  timeoutInMinutes: 360
+
+- task: ALOpsAppTest@1
+  displayName: 'ALOPS - Run TestSuite'
+  condition: eq(variables.useDisabledTests, true)
+  enabled: ${{ parameters['runTestSuite'] }}
+  inputs:
+    usedocker: true
+    disabledtests: ${{ parameters['disabledTests'] }}
+    import_testtoolkit: false
+    import_action: 'Skip'
+    testpage: '130455'
+    testsuite: 'DEFAULT'
+    failed_test_action: 'Ignore'
+  continueOnError: true
+  timeoutInMinutes: 360
+
+- task: PublishPipelineArtifact@1
+  displayName: 'Publish Artifact Test Results **/TestResults.xml'
+  enabled: ${{ parameters['runTestSuite'] }}
+  inputs:
+    targetPath: '$(System.DefaultWorkingDirectory)/TestResults.xml'
+    artifact: 'TestResults.xml'
+    publishLocation: 'pipeline'
+
+- task: PublishTestResults@2
+  displayName: 'Publish Test Results **/TestResults.xml'
+  enabled: ${{ parameters['runTestSuite'] }}
+  inputs:
+    testResultsFormat: XUnit
+    testResultsFiles: '**/TestResults.xml'
+    failTaskOnFailedTests: true
+    testRunTitle: 'BC Test Results: $(Build.BuildId)'
+
+- task: ALOpsDockerRemove@1
+  displayName: 'ALOPS - Remove Docker Container'
+  enabled: true
+  condition: always()
+  inputs:
+    createsqlbackup: ${{ parameters['createSqlBackup'] }}
