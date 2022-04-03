@@ -1,10 +1,11 @@
 [
-    { "codeunitId": 134306,"codeunitName": "Copy Workflow Tests","method": "TestCopyEnabledWorkflowToWorkflow" },
-    { "codeunitId": 134306,"codeunitName": "Copy Workflow Tests","method": "TestCopyFirstWorkflowToWorkflow" },
-    { "codeunitId": 134306,"codeunitName": "Copy Workflow Tests","method": "TestCopyTemplateToFirstWorkflow" },
-    { "codeunitId": 134306,"codeunitName": "Copy Workflow Tests","method": "TestCopyTemplateToWorkflowMultipleExist" },
-    { "codeunitId": 134306,"codeunitName": "Copy Workflow Tests","method": "TestCopyWorkflowToWorkflowMultipleExist" },
-    { "codeunitId": 134307,"codeunitName": "Cust. App. Setup Wizard Tests","method": "TestRecordChangeApprovalWizardRunFromList" },
-    { "codeunitId": 134308,"codeunitName": "Item App. Setup Wizard Tests","method": "TestRecordChangeApprovalWizardRunFromCard" },
-    { "codeunitId": 139027,"codeunitName": "Test Background Posting","method": "*" }        
+    { "codeunitId": 134180,"codeunitName":  "WF Demo Purch. Order Approvals","method":  "PurchaseOrderApprovalWithOverReceiptWorkflowStep" },
+    { "codeunitId": 139027,"codeunitName":  "Test Background Posting","method":  "PostSalesOrderSameCategoryTest" },
+    { "codeunitId": 139027,"codeunitName":  "Test Background Posting","method":  "PostPurchOrderSameCategoryTest" },
+    { "codeunitId": 139027,"codeunitName":  "Test Background Posting","method":  "PostSalesOrderNotificationTest" },
+    { "codeunitId": 139027,"codeunitName":  "Test Background Posting","method":  "PostPurchOrderNotificationTest" },
+    { "codeunitId": 139027,"codeunitName":  "Test Background Posting","method":  "PostPurchOrderNotificationWithCalcInvDiscount" },
+    { "codeunitId": 139027,"codeunitName":  "Test Background Posting","method":  "PostSalesOrderNotificationWithCalcInvDiscount" },
+    { "codeunitId": 139027,"codeunitName":  "Test Background Posting","method":  "MailManagementSubscriptionInTwoSessions" },
+    { "codeunitId": 139027,"codeunitName":  "Test Background Posting","method":  "DataPrivacyWizardExportExcelActivityLogSuccess" }
 ]
