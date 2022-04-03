@@ -95,7 +95,7 @@ steps:
   displayName: 'Publish Test Artifacts: TestResults.xml and DisabledTests.json'
   enabled: ${{ parameters['runTestSuite'] }}
   inputs:
-    targetPath: '$(System.DefaultWorkingDirectory)/TestResults.xml'
+    targetPath: '$(Agent.BuildDirectory)/TestResults'
     artifact: 'TestResults'
     publishLocation: 'pipeline'
   condition: always()
