@@ -8,7 +8,7 @@ parameters:
 steps:          
 - task: ALOpsDockerCreate@1
   condition: and(ne(variables.artifactVersion, ''), ne(variables.artifactCountry, ''))
-  displayName: "ALOPS - Create Docker Image - Version"
+  displayName: "ALOPS - Create Docker Image - Version ${{ parameters.artifactVersion }} ${{ parameters.artifactCountry }}"
   inputs:
     artifactversion: ${{ parameters.artifactVersion }}
     artifactcountry: ${{ parameters.artifactCountry }}
@@ -17,7 +17,7 @@ steps:
 
 - task: ALOpsDockerCreate@1
   condition: and(eq(variables.artifactVersion, ''), ne(variables.artifactCountry, ''))
-  displayName: "ALOPS - Create Docker Image - Latest"
+  displayName: "ALOPS - Create Docker Image - Latest ${{ parameters.artifactCountry }}"
   inputs:
     artifactcountry: ${{ parameters.artifactCountry }}
     versionselect: 'Latest'
@@ -26,7 +26,7 @@ steps:
 
 - task: ALOpsDockerCreate@1
   condition: and(eq(variables.artifactVersion, ''), eq(variables.artifactCountry, ''))
-  displayName: "ALOPS - Create Docker Image - Latest"
+  displayName: "ALOPS - Create Docker Image - Latest w1"
   inputs:
     artifactcountry: 'w1'
     versionselect: 'Latest'

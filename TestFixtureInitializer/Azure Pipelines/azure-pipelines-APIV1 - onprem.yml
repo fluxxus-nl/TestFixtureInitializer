@@ -35,8 +35,9 @@ stages:
                 _Exclude_APIV1_ Tests
 
           ### Compile and Cleanup
-          - template: ./Templates/compile-publish.yml
+          - template: ./Templates/compile-publish-run.yml
             parameters:
               navAppVersion: '1.0.[yyyyWW].*'
               runTestSuite: true
+              useDisabledTests: '$(useDisabledTests)'
               createSqlbackup: '$(createSqlBackup)'

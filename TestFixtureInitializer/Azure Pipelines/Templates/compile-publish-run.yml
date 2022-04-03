@@ -66,14 +66,6 @@ steps:
   continueOnError: true
   timeoutInMinutes: 360
 
-- task: PublishPipelineArtifact@1
-  displayName: 'Publish Artifact Test Results **/TestResults.xml'
-  enabled: ${{ parameters['runTestSuite'] }}
-  inputs:
-    targetPath: '$(System.DefaultWorkingDirectory)/TestResults.xml'
-    artifact: 'TestResults.xml'
-    publishLocation: 'pipeline'
-
 - task: PublishTestResults@2
   displayName: 'Publish Test Results **/TestResults.xml'
   enabled: ${{ parameters['runTestSuite'] }}
@@ -82,6 +74,31 @@ steps:
     testResultsFiles: '**/TestResults.xml'
     failTaskOnFailedTests: true
     testRunTitle: 'BC Test Results: $(Build.BuildId)'
+
+- task: PowerShell@2
+  displayName: "Create DisabledTests.json"
+  inputs:
+    filePath: './Scripts/ConvertTo-DisabledTests.ps1'
+    arguments: '-inputFolderPath ''$(System.DefaultWorkingDirectory)/'''
+    errorActionPreference: 'continue'
+  condition: always()
+
+- task: CopyFiles@2
+  displayName: 'Copy Test Artifacts to $(Agent.BuildDirectory)/TestResults'
+  inputs:
+    SourceFolder: '$(Build.Sourcesdirectory)'
+    Contents: ?(TestResults.xml|DisabledTests.json)
+    TargetFolder: '$(Agent.BuildDirectory)/TestResults'
+  condition: always()
+
+- task: PublishPipelineArtifact@1
+  displayName: 'Publish Test Artifacts: TestResults.xml and DisabledTests.json'
+  enabled: ${{ parameters['runTestSuite'] }}
+  inputs:
+    targetPath: '$(System.DefaultWorkingDirectory)/TestResults.xml'
+    artifact: 'TestResults'
+    publishLocation: 'pipeline'
+  condition: always()
 
 - task: ALOpsDockerRemove@1
   displayName: 'ALOPS - Remove Docker Container'
