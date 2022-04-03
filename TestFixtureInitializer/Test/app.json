@@ -10,19 +10,19 @@
   "help": "https://github.com/fluxxus-nl/TestFixtureInitializer",
   "url": "http://www.fluxxus.nl",
   "logo": "assets/logo.png",
-  "platform": "16.0.0.0",
-  "application": "16.0.0.0",
+  "platform": "18.0.0.0",
+  "application": "18.0.0.0",
   "dependencies": [
     {
       "id":  "23de40a6-dfe8-4f80-80db-d70f83ce8caf",
       "name":  "Test Runner",
       "publisher":  "Microsoft",
-      "version":  "16.0.0.0"
+      "version":  "18.0.0.0"
     },    {
       "id":  "5d86850b-0d76-4eca-bd7b-951ad998e997",
       "name":  "Tests-TestLibraries",
       "publisher":  "Microsoft",
-      "version":  "16.0.0.0"
+      "version":  "18.0.0.0"
     },
     {
       "id": "f0bf2c38-df58-4a4b-8efc-e6f2a11e00a5",
@@ -40,5 +40,5 @@
   ],
   "contextSensitiveHelpUrl": "https://Test.com/help/",
   "showMyCode": true,
-  "runtime": "5.0"
+  "runtime": "7.0"
 }

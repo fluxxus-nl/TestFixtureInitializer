@@ -10,14 +10,14 @@
   "help": "https://github.com/fluxxus-nl/TestFixtureInitializer",
   "url": "http://www.fluxxus.nl",
   "logo": "assets/logo.png",
-  "platform": "16.0.0.0",
-  "application": "16.0.0.0",
+  "platform": "18.0.0.0",
+  "application": "18.0.0.0",
   "dependencies": [
     {
       "id": "5d86850b-0d76-4eca-bd7b-951ad998e997",
       "name": "Tests-TestLibraries",
       "publisher": "Microsoft",
-      "version": "16.0.0.0"
+      "version": "18.0.0.0"
     }
   ],
   "screenshots": [],
@@ -29,5 +29,5 @@
   ],
   "contextSensitiveHelpUrl": "https://App.com/help/",
   "showMyCode": true,
-  "runtime": "5.0"
+  "runtime": "7.0"
 }
