@@ -1,5 +1,20 @@
 [
     { "codeunitId": 134076,"codeunitName": "ERM Suggest Vendor Payment","method": "PaymentBySuggestVendorPayment" },
-    { "codeunitId": 134476,"codeunitName": "ERM Dimension Purchase","method": "DimensionOnInvoiceRounding" },
-    { "codeunitId": 134483,"codeunitName": "ERM Change Global Dimensions","method": "T113_ActionPrepareOpensSessionListPagefromNotification" }    
+    { "codeunitId": 134380,"codeunitName": "ERM Dimension","method": "ShortcutDimensionsUpdatedOnDimSetIDValidation" },
+    { "codeunitId": 134483,"codeunitName": "ERM Change Global Dimensions","method": "T113_ActionPrepareOpensSessionListPagefromNotification" },
+    { "codeunitId": 134975,"codeunitName": "ERM Dimension Report","method": "DimensionTotalWithCashFlowAccountSource" },
+    { "codeunitId": 138036,"codeunitName": "O365 Cancel Sales Cr Memo Dim.","method": "CannotCancelCreditMemoWithBlockedItemDim" },
+    { "codeunitId": 138036,"codeunitName": "O365 Cancel Sales Cr Memo Dim.","method": "CannotCancelCreditMemoWithBlockedCustDim" },
+    { "codeunitId": 138036,"codeunitName": "O365 Cancel Sales Cr Memo Dim.","method": "CannotCancelCreditMemoWithBlockedItemDimComb" },
+    { "codeunitId": 138036,"codeunitName": "O365 Cancel Sales Cr Memo Dim.","method": "CannotCancelCreditMemoWithBlockedCustDimComb" },
+    { "codeunitId": 138036,"codeunitName": "O365 Cancel Sales Cr Memo Dim.","method": "CannotCancelCreditMemoWithReceivablesAccountMandatoryDim" },
+    { "codeunitId": 138036,"codeunitName": "O365 Cancel Sales Cr Memo Dim.","method": "CannotCancelCreditMemoWithInventoryAccountMandatoryDim" },
+    { "codeunitId": 138036,"codeunitName": "O365 Cancel Sales Cr Memo Dim.","method": "CannotCancelCreditMemoWithSalesVATAccountMandatoryDim" },
+    { "codeunitId": 138037,"codeunitName": "O365 Cancel Purch Cr Memo Dim.","method": "CannotCancelCreditMemoWithBlockedItemDim" },
+    { "codeunitId": 138037,"codeunitName": "O365 Cancel Purch Cr Memo Dim.","method": "CannotCancelCreditMemoWithBlockedVendDim" },
+    { "codeunitId": 138037,"codeunitName": "O365 Cancel Purch Cr Memo Dim.","method": "CannotCancelCreditMemoWithBlockedItemDimComb" },
+    { "codeunitId": 138037,"codeunitName": "O365 Cancel Purch Cr Memo Dim.","method": "CannotCancelCreditMemoWithBlockedVendDimComb" },
+    { "codeunitId": 138037,"codeunitName": "O365 Cancel Purch Cr Memo Dim.","method": "CannotCancelCreditMemoWithPayablesAccountMandatoryDim" },
+    { "codeunitId": 138037,"codeunitName": "O365 Cancel Purch Cr Memo Dim.","method": "CannotCancelCreditMemoWithInventoryAccountMandatoryDim" },
+    { "codeunitId": 138037,"codeunitName": "O365 Cancel Purch Cr Memo Dim.","method": "CannotCancelCreditMemoWithPurchaseVATAccountMandatoryDim" }
 ]

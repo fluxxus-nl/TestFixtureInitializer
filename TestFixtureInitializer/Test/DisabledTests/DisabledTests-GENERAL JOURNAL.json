@@ -1,3 +1,8 @@
 [
-    { "codeunitId": 134920,"codeunitName": "ERM General Journal UT","method": "TestCreateGenJnlBatchPostWebService" }    
+    { "codeunitId": 134408,"codeunitName": "Incom. Doc. Attach. FactBox","method": "GeneralJournal_Multiline_Attach_Prev_Next" },
+    { "codeunitId": 134408,"codeunitName": "Incom. Doc. Attach. FactBox","method": "PaymentJournal_Multiline_Attach_Prev_Next" },
+    { "codeunitId": 134408,"codeunitName": "Incom. Doc. Attach. FactBox","method": "PurchaseJournal_Multiline_Attach_Prev_Next" },
+    { "codeunitId": 134408,"codeunitName": "Incom. Doc. Attach. FactBox","method": "SalesJournal_Multiline_Attach_Prev_Next" },
+    { "codeunitId": 134408,"codeunitName": "Incom. Doc. Attach. FactBox","method": "CashReceiptJournal_Multiline_Attach_Prev_Next" },
+    { "codeunitId": 134920,"codeunitName": "ERM General Journal UT","method": "TestCreateGenJnlBatchPostWebService" }
 ]

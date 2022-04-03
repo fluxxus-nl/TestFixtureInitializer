@@ -1,7 +1,6 @@
 [
     { "codeunitId": 134814,"codeunitName": "ERM CA Budget","method": "CompressBudgetEntries" },
-    { "codeunitId": 134814,"codeunitName": "ERM CA Budget","method": "CopyCABudgetToGLNoDimension" },
+    { "codeunitId": 134814,"codeunitName": "ERM CA Budget","method": "CopyCABudgetToGLWithCCDim" },
     { "codeunitId": 134814,"codeunitName": "ERM CA Budget","method": "CopyCABudgetToGLWithBudgetDim" },
-    { "codeunitId": 134814,"codeunitName": "ERM CA Budget","method": "CopyCABudgetToGLWithCCDim" },    
-    { "codeunitId": 134814,"codeunitName": "ERM CA Budget","method": "CopyCABudgetToGLWithCODim" }
+    { "codeunitId": 134821,"codeunitName": "ERM Cost Accounting - Pages","method": "TestCostTypeBalanceRoundingFactor" }
 ]
