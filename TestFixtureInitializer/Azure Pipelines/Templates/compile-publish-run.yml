@@ -78,7 +78,7 @@ steps:
 - task: PowerShell@2
   displayName: "Create DisabledTests.json"
   inputs:
-    filePath: './Scripts/ConvertTo-DisabledTests.ps1'
+    filePath: './TestFixtureInitializer/Azure Pipelines/Scripts/ConvertTo-DisabledTests.ps1'
     arguments: '-inputFolderPath ''$(System.DefaultWorkingDirectory)/'''
     errorActionPreference: 'continue'
   condition: always()
