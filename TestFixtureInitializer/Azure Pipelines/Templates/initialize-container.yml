@@ -43,6 +43,7 @@ steps:
     artifactcountry: 'base'
     versionselect: ${{ parameters.versionSelect }}
     sastoken: ${{ parameters.sasToken }}
+    storageaccount: 'bcinsider'
     forcecreateimage: ${{ parameters.forceCreateImage }}
     licensefile: ${{ parameters.licenseUrl }}
 
@@ -54,6 +55,7 @@ steps:
     artifactcountry: ${{ parameters.artifactCountry }}
     versionselect: ${{ parameters.versionSelect }}
     sastoken: ${{ parameters.sasToken }}
+    storageaccount: 'bcinsider'
     forcecreateimage: ${{ parameters.forceCreateImage }}
     licensefile: ${{ parameters.licenseUrl }}
 
