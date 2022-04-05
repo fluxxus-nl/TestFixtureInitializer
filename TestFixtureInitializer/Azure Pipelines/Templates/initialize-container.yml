@@ -1,13 +1,15 @@
 parameters:
   artifactVersion: ''
   artifactCountry: ''
+  versionSelect: ''
+  sasToken: ''
   forceCreateImage: false
   uninstallMsApps: true
   licenseUrl: ''
 
 steps:          
 - task: ALOpsDockerCreate@1
-  condition: and(ne(variables.artifactVersion, ''), ne(variables.artifactCountry, ''))
+  condition: and(in(variables.versionSelect, '', 'latest'), ne(variables.artifactVersion, ''), ne(variables.artifactCountry, ''))
   displayName: "ALOPS - Create Docker Image - Version ${{ parameters.artifactVersion }} ${{ parameters.artifactCountry }}"
   inputs:
     artifactversion: ${{ parameters.artifactVersion }}
@@ -16,20 +18,40 @@ steps:
     licensefile: ${{ parameters.licenseUrl }} 
 
 - task: ALOpsDockerCreate@1
-  condition: and(eq(variables.artifactVersion, ''), ne(variables.artifactCountry, ''))
-  displayName: "ALOPS - Create Docker Image - Latest ${{ parameters.artifactCountry }}"
+  condition: and(in(variables.versionSelect, '', 'latest'), eq(variables.artifactVersion, ''), eq(variables.artifactCountry, ''))
+  displayName: "ALOPS - Create Docker Image - latest w1"
   inputs:
-    artifactcountry: ${{ parameters.artifactCountry }}
-    versionselect: 'Latest'
+    artifactcountry: 'w1'
+    versionselect: 'latest'
     forcecreateimage: ${{ parameters.forceCreateImage }}
     licensefile: ${{ parameters.licenseUrl }}
 
 - task: ALOpsDockerCreate@1
-  condition: and(eq(variables.artifactVersion, ''), eq(variables.artifactCountry, ''))
-  displayName: "ALOPS - Create Docker Image - Latest w1"
+  condition: and(in(variables.versionSelect, '', 'latest'), eq(variables.artifactVersion, ''), ne(variables.artifactCountry, ''))
+  displayName: "ALOPS - Create Docker Image - latest ${{ parameters.artifactCountry }}"
+  inputs:
+    artifactcountry: ${{ parameters.artifactCountry }}
+    versionselect: 'latest'
+    forcecreateimage: ${{ parameters.forceCreateImage }}
+    licensefile: ${{ parameters.licenseUrl }}
+
+- task: ALOpsDockerCreate@1
+  condition: and(in(variables.versionSelect, 'nextminor', 'nextmajor'), , eq(variables.artifactCountry, ''))
+  displayName: "ALOPS - Create Docker Image -  Insider ${{ parameters.versionSelect }} ${{ parameters.artifactCountry }}"
   inputs:
     artifactcountry: 'w1'
-    versionselect: 'Latest'
+    versionselect: ${{ parameters.versionSelect }}
+    sastoken: ${{ parameters.sasToken }}
+    forcecreateimage: ${{ parameters.forceCreateImage }}
+    licensefile: ${{ parameters.licenseUrl }}
+
+- task: ALOpsDockerCreate@1
+  condition: and(in(variables.versionSelect, 'nextminor', 'nextmajor'), , ne(variables.artifactCountry, ''))
+  displayName: "ALOPS - Create Docker Image -  Insider ${{ parameters.versionSelect }} ${{ parameters.artifactCountry }}"
+  inputs:
+    artifactcountry: ${{ parameters.artifactCountry }}
+    versionselect: ${{ parameters.versionSelect }}
+    sastoken: ${{ parameters.sasToken }}
     forcecreateimage: ${{ parameters.forceCreateImage }}
     licensefile: ${{ parameters.licenseUrl }}
 
