@@ -39,7 +39,7 @@ steps:
   condition: and(in(variables.versionSelect, 'nextminor', 'nextmajor'), eq(variables.artifactCountry, ''))
   displayName: "ALOPS - Create Docker Image -  Insider ${{ parameters.versionSelect }} base"
   inputs:
-    artifactcountry: 'base'
+    artifactcountry: 'w1'
     sastoken: ${{ parameters.sasToken }}
     storageaccount: 'bcinsider'
     forcecreateimage: ${{ parameters.forceCreateImage }}
