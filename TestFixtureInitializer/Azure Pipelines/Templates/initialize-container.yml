@@ -39,7 +39,6 @@ steps:
   condition: and(in(variables.versionSelect, 'nextminor', 'nextmajor'), eq(variables.artifactCountry, ''))
   displayName: "ALOPS - Create Docker Image -  Insider ${{ parameters.versionSelect }} base"
   inputs:
-    artifacttype: 'Sandbox'
     artifactcountry: 'base'
     versionselect: ${{ parameters.versionSelect }}
     sastoken: ${{ parameters.sasToken }}
@@ -51,7 +50,6 @@ steps:
   condition: and(in(variables.versionSelect, 'nextminor', 'nextmajor'), ne(variables.artifactCountry, ''))
   displayName: "ALOPS - Create Docker Image -  Insider ${{ parameters.versionSelect }} ${{ parameters.artifactCountry }}"
   inputs:
-    artifacttype: 'Sandbox'
     artifactcountry: ${{ parameters.artifactCountry }}
     versionselect: ${{ parameters.versionSelect }}
     sastoken: ${{ parameters.sasToken }}
