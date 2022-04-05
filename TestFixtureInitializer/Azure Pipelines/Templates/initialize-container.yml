@@ -41,7 +41,6 @@ steps:
   inputs:
     artifacttype: 'Sandbox'
     artifactcountry: 'base'
-    versionselect: ${{ parameters.versionSelect }}
     sastoken: ${{ parameters.sasToken }}
     storageaccount: 'bcinsider'
     forcecreateimage: ${{ parameters.forceCreateImage }}
@@ -53,7 +52,6 @@ steps:
   inputs:
     artifacttype: 'Sandbox'
     artifactcountry: ${{ parameters.artifactCountry }}
-    versionselect: ${{ parameters.versionSelect }}
     sastoken: ${{ parameters.sasToken }}
     storageaccount: 'bcinsider'
     forcecreateimage: ${{ parameters.forceCreateImage }}
