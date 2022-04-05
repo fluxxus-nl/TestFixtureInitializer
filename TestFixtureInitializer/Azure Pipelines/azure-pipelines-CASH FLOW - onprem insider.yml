@@ -20,7 +20,7 @@ stages:
             parameters:
               artifactversion: $(artifactVersion)
               artifactcountry: $(artifactCountry)
-              versionSelect: 'nextmajor'
+              versionSelect: $(versionSelect)
               sasToken: $(BCInsiderToken)
               forceCreateImage: $(forceCreateImage)
               licenseUrl: $(LuxBeheerBcDevLicense)
