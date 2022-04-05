@@ -36,7 +36,7 @@ steps:
     licensefile: ${{ parameters.licenseUrl }}
 
 - task: ALOpsDockerCreate@1
-  condition: and(in(variables.versionSelect, 'nextminor', 'nextmajor'), , eq(variables.artifactCountry, ''))
+  condition: and(in(variables.versionSelect, 'nextminor', 'nextmajor'), eq(variables.artifactCountry, ''))
   displayName: "ALOPS - Create Docker Image -  Insider ${{ parameters.versionSelect }} ${{ parameters.artifactCountry }}"
   inputs:
     artifactcountry: 'w1'
@@ -46,7 +46,7 @@ steps:
     licensefile: ${{ parameters.licenseUrl }}
 
 - task: ALOpsDockerCreate@1
-  condition: and(in(variables.versionSelect, 'nextminor', 'nextmajor'), , ne(variables.artifactCountry, ''))
+  condition: and(in(variables.versionSelect, 'nextminor', 'nextmajor'), ne(variables.artifactCountry, ''))
   displayName: "ALOPS - Create Docker Image -  Insider ${{ parameters.versionSelect }} ${{ parameters.artifactCountry }}"
   inputs:
     artifactcountry: ${{ parameters.artifactCountry }}
