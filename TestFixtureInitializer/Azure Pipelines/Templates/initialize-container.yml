@@ -1,5 +1,5 @@
 parameters:
-  artifactVersion: $null
+  artifactVersion: ''
   artifactCountry: ''
   versionSelect: ''
   sasToken: ''
