@@ -12,7 +12,7 @@ stages:
   - stage: Build
     jobs:
       - job: Build
-        timeoutInMinutes: 480
+        timeoutInMinutes: 540
         pool: Default
         steps:
           ### Initialize Container
@@ -27,13 +27,13 @@ stages:
 
           ### install specific test apps
           - task: ALOpsAppPublish@1
-            displayName: 'ALOPS - Install specific test app(s)' 
+            displayName: 'ALOPS - Install MS test app $(testExtensionName)' 
             inputs:
               usedocker: true
               installaltesttool: true
               skip_verification: true
               install_al_app_names: |
-                Tests-ERM
+                $(testExtensionName)
 
           ### Compile and Cleanup
           - template: ./Templates/compile-publish-run.yml
@@ -41,5 +41,5 @@ stages:
               navAppVersion: '1.0.[yyyyWW].*'
               runTestSuite: true
               useDisabledTests: '$(useDisabledTests)'
-              disabledTests: '$(Build.SourcesDirectory)/TestFixtureInitializer/Test/DisabledTests/DisabledTests-ERM.json'
+              disabledTests: '$(Build.SourcesDirectory)/TestFixtureInitializer/Test/DisabledTests/$(disabledTestsFileName)'
               createSqlbackup: '$(createSqlBackup)'
