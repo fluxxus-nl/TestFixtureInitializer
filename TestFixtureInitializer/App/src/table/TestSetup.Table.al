@@ -1,4 +1,4 @@
-Table 97000 "FLX Test Setup"
+table 97000 "FLX Test Setup"
 {
     // (c) fluxxus.nl - https://github.com/fluxxus-nl/TestFixtureInitializer
 
@@ -11,6 +11,7 @@ Table 97000 "FLX Test Setup"
         {
             Caption = 'Primary Key';
             DataClassification = ToBeClassified;
+            NotBlank = true;
         }
         field(2; "Prebuilt Fixture Exists"; Boolean)
         {
