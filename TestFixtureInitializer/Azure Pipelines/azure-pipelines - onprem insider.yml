@@ -7,6 +7,10 @@ trigger:
 
 variables:
 - group: 'PipelineVariables'
+- name: 'pruneImagesDaysCreated'
+  value: 3
+- name: 'bcArtifactsDaysUnused'
+  value: 3
 
 stages:  
   - stage: Build
@@ -43,3 +47,14 @@ stages:
               useDisabledTests: '$(useDisabledTests)'
               disabledTests: '$(Build.SourcesDirectory)/TestFixtureInitializer/Test/DisabledTests/$(disabledTestsFileName)'
               createSqlbackup: '$(createSqlBackup)'
+          
+          - task: ALOpsAgentMaintenance@1
+            displayName: 'ALOPS - Agent cleanup - prune images ($(pruneImagesDaysCreated) days) and artifact ($(bcArtifactsDaysUnused) days)'
+            enabled: true
+            condition: always()
+            inputs:
+              removeoldtasks: true
+              removeunusedcontainers: true
+              pruneimagesdayscreated: '$(pruneImagesDaysCreated)'
+              removebcartifacts: true
+              daysunused: '$(bcArtifactsDaysUnused)'
