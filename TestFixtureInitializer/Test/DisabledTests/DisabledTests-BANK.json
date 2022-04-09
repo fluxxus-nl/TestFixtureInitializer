@@ -75,5 +75,5 @@
     { "codeunitId": 134141,"codeunitName": "ERM Bank Reconciliation","method": "UndoBankStatementWithCheckLedgerEntryIncludeChecksNo" },
     { "codeunitId": 134141,"codeunitName": "ERM Bank Reconciliation","method": "UndoBankStatementManyToOneWithCheckLedgerEntry" },
     { "codeunitId": 134141,"codeunitName": "ERM Bank Reconciliation","method": "PostBankReconciliationWhenSatementNoExist" },
-    { "codeunitId": 134261,"codeunitName": "Bank Pmt. Appl. Algorithm","method": "TestVendSingleAmountMatchWithAmountPercentageTolerance" 
+    { "codeunitId": 134261,"codeunitName": "Bank Pmt. Appl. Algorithm","method": "TestVendSingleAmountMatchWithAmountPercentageTolerance" }
 ]
