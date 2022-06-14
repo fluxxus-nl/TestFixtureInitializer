@@ -90,3 +90,4 @@ steps:
       Tests-TestLibraries
       Permissions Mock
       Test Runner
+      Tests-ERM
