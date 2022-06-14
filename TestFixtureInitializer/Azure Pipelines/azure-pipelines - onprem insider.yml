@@ -38,6 +38,7 @@ stages:
               skip_verification: true
               install_al_app_names: |
                 $(testExtensionName)
+                Tests-ERM
 
           ### Compile and Cleanup
           - template: ./Templates/compile-publish-run.yml
