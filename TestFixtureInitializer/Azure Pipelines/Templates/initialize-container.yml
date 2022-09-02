@@ -69,7 +69,7 @@ steps:
   displayName: 'ALOPS - License Import'
   inputs:
     usedocker: true
-    license_path: '${{ parameters.licenseUrl }}
+    license_path: '${{ parameters.licenseUrl }}'
 
 - task: ALOpsDockerExec@1
   condition: eq(variables.uninstallMsApps, 'true')
