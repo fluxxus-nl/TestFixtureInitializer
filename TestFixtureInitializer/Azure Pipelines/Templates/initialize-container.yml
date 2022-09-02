@@ -65,6 +65,12 @@ steps:
   inputs:
     search_string: 'Ready for connections!'
 
+- task: ALOpsLicenseImport@1
+  displayName: 'ALOPS - License Import'
+  inputs:
+    usedocker: true
+    license_path: '${{ parameters.licenseUrl }}
+
 - task: ALOpsDockerExec@1
   condition: eq(variables.uninstallMsApps, 'true')
   displayName: 'ALOPS - Uninstall MS apps (but leave Application apps)'
