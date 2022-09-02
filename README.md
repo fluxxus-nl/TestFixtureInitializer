@@ -11,7 +11,7 @@ With respect to the **first part** this schema shows how the various parts relat
 
 ![schema](https://github.com/fluxxus-nl/TestFixtureInitializer/blob/master/Images/Test%20Fixture%20Initializer%20FlowChart.jpg) 
 
-Find a more detailed description on my [blog](https://dynamicsuser.net/nav/b/vanvugt/posts/test-fixture-initializer).
+Find a more detailed description on my [blog](https://www.fluxxus.nl/index.php/bc/test-fixture-initializer/).
 Feel free to make use of the code, and share your suggestions for improvements by means of an issue report.
 
 The **second and third part** have been effectuated as [Azure DevOps pipelines](https://dev.azure.com/fluxxus-nl/TestFixtureInitializer/). You will find a pipeline per test extension, but also 6 batches of MS test apps that could be combine as at this very moment not all MS test apps can coexist in one test suite (see more detailed info below).
