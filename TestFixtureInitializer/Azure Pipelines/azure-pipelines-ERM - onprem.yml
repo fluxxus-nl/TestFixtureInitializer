@@ -12,7 +12,7 @@ stages:
   - stage: Build
     jobs:
       - job: Build
-        timeoutInMinutes: 600
+        timeoutInMinutes: 660
         pool: Default
         steps:
           ### Initialize Container
