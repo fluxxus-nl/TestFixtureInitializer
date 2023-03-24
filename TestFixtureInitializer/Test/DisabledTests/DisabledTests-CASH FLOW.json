@@ -1,4 +1,6 @@
 [
-    { "codeunitId": 134553,"codeunitName": "ERM Cash Flow - Filling II","method": "CustLEWithinDsctPmtTolDsctPmt" },
-    { "codeunitId": 134553,"codeunitName": "ERM Cash Flow - Filling II","method": "VendLEWithinDsctPmtTolDsctPmt" }
+    { "codeunitId": 139315,"codeunitName": "CF Forecast Wizard Tests","method": "VerifyStatusNotCompletedWhenNotFinished" },
+    { "codeunitId": 139315,"codeunitName": "CF Forecast Wizard Tests","method": "VerifyStatusNotCompletedWhenExitRightAway" },
+    { "codeunitId": 139315,"codeunitName": "CF Forecast Wizard Tests","method": "VerifyWizardNotExitedWhenConfirmIsNo" },
+    { "codeunitId": 139315,"codeunitName": "CF Forecast Wizard Tests","method": "VerifyLiquidFundsGLAccountFilterDefaultValue" }
 ]

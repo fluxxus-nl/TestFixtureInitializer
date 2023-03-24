@@ -1,9 +1,4 @@
 [
-    { "codeunitId": 132532,"codeunitName": "Test Granules","method": "AllAppTablesAreInPermissionSet" },
-    { "codeunitId": 132532,"codeunitName": "Test Granules","method": "AllLocalAppObjectsAreInLocalPermissionSet" },
-    { "codeunitId": 132532,"codeunitName": "Test Granules","method": "AllLocalAppObjectsAreInO365FullPermissionSet" },
-    { "codeunitId": 132532,"codeunitName": "Test Granules","method": "AllLocalAppObjectsAreInO365BusFullPermissionSet" },
-    { "codeunitId": 132532,"codeunitName": "Test Granules","method": "AllO365PermissionsAreInO365Full" },
     { "codeunitId": 134612,"codeunitName": "Test Editing Permissions","method": "StanCanCreateNewTenantPermissionSets" },
     { "codeunitId": 134612,"codeunitName": "Test Editing Permissions","method": "StanCanCopyPermissionSetsToNewTenantPermissionSets" },
     { "codeunitId": 134612,"codeunitName": "Test Editing Permissions","method": "StanCanCopyPermissionSetsToNewTenantPermissionSetsWithoutCopyingLink" },
@@ -36,22 +31,7 @@
     { "codeunitId": 134612,"codeunitName": "Test Editing Permissions","method": "RenameUserDefinedPermissionSet" },
     { "codeunitId": 134612,"codeunitName": "Test Editing Permissions","method": "RenameUserDefinedPermissionSetUsedUsersSettings" },
     { "codeunitId": 134612,"codeunitName": "Test Editing Permissions","method": "StanStartsAndStopsRecorderOnEditablePermissionSet" },
-    { "codeunitId": 135413,"codeunitName": "Service Mgmt. Plan-based E2E","method": "TestCreateAndPostServiceItemAndServiceOrderAsViralSignup" },
-    { "codeunitId": 135413,"codeunitName": "Service Mgmt. Plan-based E2E","method": "TestCreateAndPostServiceItemAndServiceOrderAsPremiumUser" },
     { "codeunitId": 135413,"codeunitName": "Service Mgmt. Plan-based E2E","method": "TestCreateAndPostServiceItemAndServiceOrderAsBusinessManager" },
-    { "codeunitId": 135413,"codeunitName": "Service Mgmt. Plan-based E2E","method": "TestCreateAndPostServiceItemAndServiceOrderAsExternalAccountant" },
-    { "codeunitId": 135413,"codeunitName": "Service Mgmt. Plan-based E2E","method": "TestCreateAndPostServiceItemAndServiceOrderAsTeamMember" },
-    { "codeunitId": 135413,"codeunitName": "Service Mgmt. Plan-based E2E","method": "TestCreateAndPostServiceItemAndServiceOrderAsPremiumISVEmbUser" },
     { "codeunitId": 135413,"codeunitName": "Service Mgmt. Plan-based E2E","method": "TestCreateAndPostServiceItemAndServiceOrderAsEssentialISVEmbUser" },
-    { "codeunitId": 135413,"codeunitName": "Service Mgmt. Plan-based E2E","method": "TestCreateAndPostServiceItemAndServiceOrderAsTeamMemberISVEmb" },
-    { "codeunitId": 135413,"codeunitName": "Service Mgmt. Plan-based E2E","method": "TestCreateAndPostServiceItemAndServiceOrderAsDeviceISVEmbUser" },
-    { "codeunitId": 135413,"codeunitName": "Service Mgmt. Plan-based E2E","method": "TestSignAndCreateServiceContractAsViralSignup" },
-    { "codeunitId": 135413,"codeunitName": "Service Mgmt. Plan-based E2E","method": "TestSignAndCreateServiceContractAsBusinessManager" },
-    { "codeunitId": 135413,"codeunitName": "Service Mgmt. Plan-based E2E","method": "TestSignAndCreateServiceContractAsExternalAccountant" },
-    { "codeunitId": 135413,"codeunitName": "Service Mgmt. Plan-based E2E","method": "TestSignAndCreateServiceContractAsTeamMember" },
-    { "codeunitId": 135413,"codeunitName": "Service Mgmt. Plan-based E2E","method": "TestSignAndCreateServiceContractAsEssentialISVEmb" },
-    { "codeunitId": 135413,"codeunitName": "Service Mgmt. Plan-based E2E","method": "TestSignAndCreateServiceContractAsTeamMemberISVEmb" },
-    { "codeunitId": 135413,"codeunitName": "Service Mgmt. Plan-based E2E","method": "TestSignAndCreateServiceContractAsDeviceISVEmb" },
-    { "codeunitId": 139400,"codeunitName": "Permissions Test","method": "PermissionSetsWithSameNameAndDifferentTypes" },
-    { "codeunitId": 139430,"codeunitName": "Permission Test Verification","method": "VerifyPermissionTestEnabled" }
+    { "codeunitId": 135413,"codeunitName": "Service Mgmt. Plan-based E2E","method": "TestCreateAndPostServiceItemAndServiceOrderAsDeviceISVEmbUser" }
 ]

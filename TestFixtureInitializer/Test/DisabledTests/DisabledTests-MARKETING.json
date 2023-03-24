@@ -1,11 +1,5 @@
 [
-    { "codeunitId": 134640,"codeunitName": "Sales E2E","method": "SalesFromContactToPayment" },
-    { "codeunitId": 136201,"codeunitName": "Marketing Contacts","method": "SalesQuoteForContactCustomerTemplate" },
-    { "codeunitId": 136201,"codeunitName": "Marketing Contacts","method": "SalesQuoteForContactPersonCustomerTemplate" },
-    { "codeunitId": 136201,"codeunitName": "Marketing Contacts","method": "SalesQuoteEmailDialogForContact" },
-    { "codeunitId": 136208,"codeunitName": "Marketing Interaction","method": "DeleteInteractionTmplWithEmailMergeAttachment" },
-    { "codeunitId": 136208,"codeunitName": "Marketing Interaction","method": "EmailDraftInteractionLogEntryFromSalesOrder" },
-    { "codeunitId": 136208,"codeunitName": "Marketing Interaction","method": "EmailDraftInteractionLogEntryFromPurchOrder" },
+    { "codeunitId": 136211,"codeunitName": "Marketing Matrix Management","method": "TaskWithContact" },
     { "codeunitId": 136211,"codeunitName": "Marketing Matrix Management","method": "OpportunityWithSalesperson" },
     { "codeunitId": 136211,"codeunitName": "Marketing Matrix Management","method": "OpportunityWithContact" },
     { "codeunitId": 136211,"codeunitName": "Marketing Matrix Management","method": "OpportunityWithCampaign" },
@@ -15,7 +9,5 @@
     { "codeunitId": 136211,"codeunitName": "Marketing Matrix Management","method": "OpportunityAsAverageCurrent" },
     { "codeunitId": 136211,"codeunitName": "Marketing Matrix Management","method": "OpportunityWithActionWon" },
     { "codeunitId": 136211,"codeunitName": "Marketing Matrix Management","method": "OpportunityWithActionLost" },
-    { "codeunitId": 136212,"codeunitName": "Marketing Contacts Search II","method": "DuplicateSearchStringSetupFieldNameLookup" },
-    { "codeunitId": 136213,"codeunitName": "Marketing Segment","method": "InteractionTemplateCodeValidateHdrWhenConfirmUpdateSegLines" },
-    { "codeunitId": 136216,"codeunitName": "Marketing Cues","method": "ContactsDuplicate" }
+    { "codeunitId": 136212,"codeunitName": "Marketing Contacts Search II","method": "DuplicateSearchStringSetupFieldNameLookup" }
 ]

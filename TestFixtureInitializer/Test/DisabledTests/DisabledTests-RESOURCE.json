@@ -1,14 +1,3 @@
 [
-    { "codeunitId": 135930,"codeunitName": "Time Sheet Reg. E2E Test","method": "TestCreateTimeSheetNewHeader" },
-    { "codeunitId": 135930,"codeunitName": "Time Sheet Reg. E2E Test","method": "TestCreateTimeSheetNewLine" },
-    { "codeunitId": 135930,"codeunitName": "Time Sheet Reg. E2E Test","method": "TestCreateTimeSheetNewDetail" },
-    { "codeunitId": 135930,"codeunitName": "Time Sheet Reg. E2E Test","method": "TestCreateTimeSheetDetailAndCheckLineNumber" },
-    { "codeunitId": 135930,"codeunitName": "Time Sheet Reg. E2E Test","method": "TestCreateTimeSheetGenerateResource" },
-    { "codeunitId": 135930,"codeunitName": "Time Sheet Reg. E2E Test","method": "TestPatchTimeSheet" },
-    { "codeunitId": 135930,"codeunitName": "Time Sheet Reg. E2E Test","method": "TestGetTimeSheetByTimeSheetDetailId" },
-    { "codeunitId": 135930,"codeunitName": "Time Sheet Reg. E2E Test","method": "TestGetTimeSheetsWithDateFilter" },
-    { "codeunitId": 135930,"codeunitName": "Time Sheet Reg. E2E Test","method": "TestGetTimeSheetsWithEmployeeFilter" },
-    { "codeunitId": 135930,"codeunitName": "Time Sheet Reg. E2E Test","method": "TestDeleteTimeSheet" },
-    { "codeunitId": 135930,"codeunitName": "Time Sheet Reg. E2E Test","method": "TestEmployeeNoAndIdSync" },
-    { "codeunitId": 136400,"codeunitName": "Resource Employee","method": "EmployeeCardPaymentsTab" }
+    { "codeunitId":  136400,"codeunitName":  "Resource Employee","method":  "EmployeeCardPaymentsTab" }
 ]

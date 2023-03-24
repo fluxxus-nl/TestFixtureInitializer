@@ -1,4 +1,3 @@
 [
-    { "codeunitId": 132543,"codeunitName": "Data Exch. Def UT","method": "CheckLineTypesExport" },
-    { "codeunitId": 134161,"codeunitName": "Pmt Export Mgt Gen. Jnl Test","method": "ExportPmtJnlLineManuallyApplied" }
+    { "codeunitId":  132543,"codeunitName":  "Data Exch. Def UT","method":  "CheckLineTypesExport" }
 ]

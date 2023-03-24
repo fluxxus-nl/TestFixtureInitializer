@@ -1,6 +1,3 @@
 [
-    { "codeunitId": 136306,"codeunitName": "Job Invoicing","method": "CopyTransferedAndPostingDateFromPostedInvoice" },
-    { "codeunitId": 136309,"codeunitName": "Job Posting","method": "PurchaseCreditMemoWithTrackingAndJob" },
-    { "codeunitId": 136309,"codeunitName": "Job Posting","method": "PostingPurchaseCreditMemoWithJobAndTracking" },
-    { "codeunitId": 136350,"codeunitName": "UT T Job","method": "MyJobAfterModifyJobProjectManager" }
+    { "codeunitId":  136350,"codeunitName":  "UT T Job","method":  "MyJobAfterModifyJobProjectManager" }
 ]

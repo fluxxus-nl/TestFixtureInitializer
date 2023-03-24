@@ -1,10 +1,12 @@
 [
+    { "codeunitId": 133769,"codeunitName": "Daily Report Tests","method": "TestDayBookVATEntry" },
+    { "codeunitId": 133769,"codeunitName": "Daily Report Tests","method": "OnAfterGetRecordVATEntryPurchWithVendorDayBookVATEntry" },
+    { "codeunitId": 133769,"codeunitName": "Daily Report Tests","method": "OnAfterGetRecordVATEntrySaleWithCustDayBookVATEntry" },
+    { "codeunitId": 133769,"codeunitName": "Daily Report Tests","method": "OnAfterGetRecordVATEntryTypeSettlementDayBookVATEntry" },
+    { "codeunitId": 133769,"codeunitName": "Daily Report Tests","method": "OnAfterGetRecordVATEntrySaleWithoutCustDayBookVATEntry" },
+    { "codeunitId": 133769,"codeunitName": "Daily Report Tests","method": "OnAfterGetRecordVATEntryPurchWithoutVendorDayBookVATEntry" },
     { "codeunitId": 133769,"codeunitName": "Daily Report Tests","method": "OnAfterGetRecordLedgerEntryDayBookVendorLedgerEntry" },
     { "codeunitId": 133769,"codeunitName": "Daily Report Tests","method": "DayBookVATEntryCustomerVendorWithSameNos" },
-    { "codeunitId": 134336,"codeunitName": "ERM Purch. Doc. Reports - II","method": "VendorLabel36x70mm3Columns" },
-    { "codeunitId": 134336,"codeunitName": "ERM Purch. Doc. Reports - II","method": "VendorLabel37x70mm3Columns" },
-    { "codeunitId": 134336,"codeunitName": "ERM Purch. Doc. Reports - II","method": "VendorLabel36x105mm2Columns" },
-    { "codeunitId": 134336,"codeunitName": "ERM Purch. Doc. Reports - II","method": "VendorLabel37x105mm2Columns" },
     { "codeunitId": 134605,"codeunitName": "Test Report Layout Selection","method": "TestReportLayoutPageBuiltinLookup" },
     { "codeunitId": 134605,"codeunitName": "Test Report Layout Selection","method": "TestReportLayoutPageSelectLayout" },
     { "codeunitId": 134605,"codeunitName": "Test Report Layout Selection","method": "TestReportLayoutRestoreDefaultLayout" },
@@ -48,13 +50,9 @@
     { "codeunitId": 134767,"codeunitName": "Test OData Wizard US","method": "TestCustomerListEnglishUS" },
     { "codeunitId": 134767,"codeunitName": "Test OData Wizard US","method": "TestSalesDashboardEnglishUS" },
     { "codeunitId": 134767,"codeunitName": "Test OData Wizard US","method": "TestWizardValidation" },
-    { "codeunitId": 134767,"codeunitName": "Test OData Wizard US","method": "TestOnCompanyInitialization" },
     { "codeunitId": 134767,"codeunitName": "Test OData Wizard US","method": "TestExcelWorkBookGeneration" },
     { "codeunitId": 134775,"codeunitName": "Word \u0026 RDLC Report Selections","method": "OneCustomer_TwoSelections_RDLC_Ok_WORD_Ok" },
     { "codeunitId": 134775,"codeunitName": "Word \u0026 RDLC Report Selections","method": "OneCustomer_TwoSelections_WORD_Ok_RDLC_Ok" },
     { "codeunitId": 134775,"codeunitName": "Word \u0026 RDLC Report Selections","method": "TwoCustomers_OneSelection_RDLC_Ok" },
-    { "codeunitId": 134775,"codeunitName": "Word \u0026 RDLC Report Selections","method": "TwoCustomers_OneSelection_WORD_Ok" },
-    { "codeunitId": 134984,"codeunitName": "ERM Sales Report III","method": "CustomerBalanceToDateAllFalse" },
-    { "codeunitId": 134984,"codeunitName": "ERM Sales Report III","method": "CustomerBalanceToDateAmountLCY" },
-    { "codeunitId": 136905,"codeunitName": "Service Reports - II","method": "ServiceProfitOrdersShowDetailMultiLines" }
+    { "codeunitId": 134775,"codeunitName": "Word \u0026 RDLC Report Selections","method": "TwoCustomers_OneSelection_WORD_Ok" }
 ]
