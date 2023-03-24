@@ -1,0 +1,58 @@
+name: $(Build.BuildId)
+
+trigger:
+ branches:
+   include:
+     - master/TestFixtureInitializer
+
+variables:
+- group: 'PipelineVariables'
+- name: 'pruneImagesDaysCreated'
+  value: 3
+- name: 'bcArtifactsDaysUnused'
+  value: 3
+
+stages:  
+  - stage: Build
+    jobs:
+      - job: Build
+        timeoutInMinutes: 600
+        pool: Default
+        steps:
+          ### Initialize Container
+          - template: ./Templates/initialize-container.yml
+            parameters:
+              artifactversion: $(artifactVersion)
+              artifactcountry: $(artifactCountry)
+              forceCreateImage: $(forceCreateImage)
+              licenseUrl: $(LuxBeheerBcDevLicense)
+
+          ### install specific test apps
+          - task: ALOpsAppPublish@1
+            displayName: 'ALOPS - Install MS test app $(testExtensionName)' 
+            inputs:
+              usedocker: true
+              installaltesttool: true
+              skip_verification: true
+              install_al_app_names: |
+                $(testExtensionName)
+
+          ### Compile and Cleanup
+          - template: ./Templates/compile-publish-run.yml
+            parameters:
+              navAppVersion: '1.0.[yyyyWW].*'
+              runTestSuite: true
+              useDisabledTests: '$(useDisabledTests)'
+              disabledTests: '$(Build.SourcesDirectory)/TestFixtureInitializer/Test/DisabledTests/$(disabledTestsFileName)'
+              createSqlbackup: '$(createSqlBackup)'
+          
+          - task: ALOpsAgentMaintenance@1
+            displayName: 'ALOPS - Agent cleanup - prune images ($(pruneImagesDaysCreated) days) and artifact ($(bcArtifactsDaysUnused) days)'
+            enabled: true
+            condition: always()
+            inputs:
+              removeoldtasks: true
+              removeunusedcontainers: true
+              pruneimagesdayscreated: '$(pruneImagesDaysCreated)'
+              removebcartifacts: true
+              daysunused: '$(bcArtifactsDaysUnused)'
