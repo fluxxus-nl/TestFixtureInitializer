@@ -49,7 +49,7 @@ steps:
     testsuite: 'DEFAULT'
     failed_test_action: 'Ignore'
   continueOnError: true
-  timeoutInMinutes: 480
+  timeoutInMinutes: 540
 
 - task: ALOpsAppTest@1
   displayName: 'ALOPS - Run TestSuite'
