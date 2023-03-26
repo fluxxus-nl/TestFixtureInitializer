@@ -64,7 +64,7 @@ steps:
     testsuite: 'DEFAULT'
     failed_test_action: 'Ignore'
   continueOnError: true
-  timeoutInMinutes: 480
+  timeoutInMinutes: 540
 
 - task: PublishTestResults@2
   displayName: 'Publish Test Results **/TestResults.xml'
