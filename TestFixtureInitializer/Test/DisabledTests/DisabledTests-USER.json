@@ -4,5 +4,6 @@
     { "codeunitId": 132901,"codeunitName": "RTCAdmin_User_PermissionSet","method": "RTCAdmin_AddAdministratorsTest" },
     { "codeunitId": 135402,"codeunitName": "Location Trans. Plan-based E2E","method": "SusanSellsAnItemExistingInSpecificLocationAfterTransferringItToAnotherLocation" },
     { "codeunitId": 135402,"codeunitName": "Location Trans. Plan-based E2E","method": "SusanSellsAnItemExistingInSpecificLocationAfterTransferringItToAnotherLocationAsEssentialISVEmbUser" },
+    { "codeunitId": 135402,"codeunitName": "Location Trans. Plan-based E2E","method": "TriciaSellsAnItemExistingInSpecificLocationAfterTransferringItToAnotherLocationAsTeamMemberISVEmb" },
     { "codeunitId": 135402,"codeunitName": "Location Trans. Plan-based E2E","method": "SusanSellsAnItemExistingInSpecificLocationAfterTransferringItToAnotherLocationAsDeviceISVEmbUser" }
 ]
