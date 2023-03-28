@@ -11,6 +11,8 @@
     { "codeunitId": 134605,"codeunitName": "Test Report Layout Selection","method": "TestReportLayoutPageSelectLayout" },
     { "codeunitId": 134605,"codeunitName": "Test Report Layout Selection","method": "TestReportLayoutRestoreDefaultLayout" },
     { "codeunitId": 134605,"codeunitName": "Test Report Layout Selection","method": "TestPageServerPrinters" },
+    { "codeunitId": 134605,"codeunitName": "Test Report Layout Selection","method": "TestDateTimeDialogFromJobQECard" },
+    { "codeunitId": 134605,"codeunitName": "Test Report Layout Selection","method": "TestDateTimeDialogFromJobQECard2" },
     { "codeunitId": 134761,"codeunitName": "Test Custom Reports","method": "TestDeletionOfVendor" },
     { "codeunitId": 134761,"codeunitName": "Test Custom Reports","method": "TestEmailQuotes" },
     { "codeunitId": 134761,"codeunitName": "Test Custom Reports","method": "TestEmailOrders" },
