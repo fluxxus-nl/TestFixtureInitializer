@@ -40,5 +40,5 @@ stages:
               navAppVersion: '1.0.[yyyyWW].*'
               runTestSuite: true
               useDisabledTests: '$(useDisabledTests)'
-              disabledTests: '$(Build.SourcesDirectory)/TestFixtureInitializer/Test/DisabledTests/DisabledTests-Batch6.json'
+              disabledTests: '$(Build.SourcesDirectory)/TestFixtureInitializer/Test/DisabledTests/DisabledTests.json'
               createSqlbackup: '$(createSqlBackup)'
