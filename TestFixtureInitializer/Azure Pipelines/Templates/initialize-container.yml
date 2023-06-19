@@ -66,7 +66,7 @@ steps:
     search_string: 'Ready for connections!'
 
 - task: ALOpsLicenseImport@1
-  condition: neq(variables.licenseUrl, '')
+  condition: ne(variables.licenseUrl, '')
   displayName: 'ALOPS - License Import'
   inputs:
     usedocker: true
