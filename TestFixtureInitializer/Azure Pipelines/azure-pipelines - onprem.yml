@@ -25,7 +25,6 @@ stages:
               artifactversion: $(artifactVersion)
               artifactcountry: $(artifactCountry)
               forceCreateImage: $(forceCreateImage)
-              licenseUrl: $(LuxBeheerBcDevLicense)
 
           ### install specific test apps
           - task: ALOpsAppPublish@1
